@@ -1,0 +1,19 @@
+body {
+  background: black;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 2vw;
+}
+.container {
+  list-style-type: none;
+}
+
+.indexphoto {
+  width: 25%;
+  border: 1px solid white;
+  border-radius: 10px;
+}

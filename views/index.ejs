@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="app.css">
+    <title>ChordStrike</title>
+  </head>
+  <body>
+    <h1>ChordStrike</h1>
+    <nav>
+        <a href = '/songs/new'>Add a Song</a>
+    <div class="container">
+      <% for (let i = 0; i < songsIndex.length; i++) { %>
+        <li>
+
+          <img class = 'indexphoto' src = '<%= songsIndex[i].img %>'></img>
+          <div> <%=songsIndex[i].title%> <br/> <%=songsIndex[i].artist%>
+          </div>
+          <audio controls>
+            <source src= 'cdg.mp3' type= 'audio/mpeg'>
+          </audio><br/>
+          <form action='/songs/<%=songsIndex[i].id; %>/edit' >
+          <input type='submit' value = 'EDIT' />
+        </form>
+          <form action="/songs/<%=songsIndex[i].id%>?_method=DELETE" method="POST">
+          <input type='submit' value = 'DELETE' />
+        </form>
+
+        </li>
+
+    <% } %>
+
+    <audio controls>
+      <source src= 'cdg.mp3' type= 'audio/mpeg'>
+    </audio><br/>
+    </div>
+  </body>
+</html>

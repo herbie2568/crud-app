@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Edit Song Info</h1>
+
+    <form action = "/songs/<%= songsEdit.id%>?_method=PUT" method = 'POST'>
+      <input type='text' name = 'title' placeholder = 'song title...' value = '<%=songsEdit.title%>;'/><br/>
+      <input type='text' name = 'artist' placeholder = 'artist...' value = '<%=songsEdit.artist%>'/><br/>
+    <input type='text' name = 'genre' placeholder = 'genre...' value = '<%=songsEdit.genre%>'/><br/>
+    Album Image: <input type= 'url' name = 'img' value = '<%=songsEdit.img%>'/><br/>
+    MP3 File: <input type= 'file' name = 'audiofile'/><br/>
+    Music Video Link: <input type= 'url' name = 'musicvideo' value = '<%=songsEdit.musicvideo%>'/><br/>
+
+
+
+
+      <input type = 'submit' value = 'Submit Changes'/>
+    </form>
+  </body>
+</html>

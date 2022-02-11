@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Add New Song</h1>
+
+    <form action = '/songs' method = 'POST'>
+      <input type='text' name = 'title' placeholder = 'song title...'/><br/>
+      <input type='text' name = 'artist' placeholder = 'artist...'/><br/>
+    <input type='text' name = 'genre' placeholder = 'genre...'/><br/>
+    Album Image: <input type= 'url' name = 'img' /><br/>
+    MP3 File: <input type= 'file' name = 'audiofile'/><br/>
+    Music Video Link: <input type= 'url' name = 'musicvideo' /><br/>
+
+
+
+
+      <input type = 'submit' value = 'Add Song'/>
+    </form>
+  </body>
+</html>
