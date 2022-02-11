@@ -19,9 +19,7 @@ app.use(express.urlencoded({ extended: false }));// extended: false - does not a
 app.use(express.json());
 app.use(methodOverride('_method'));
 
-app.get('/' , (req, res) => {
-  res.send('Hello World!');
-});
+
 
 ////NEW ROUTE////
 app.get('/songs/new', (req, res) => {
