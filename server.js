@@ -1,8 +1,10 @@
 const express = require('express');
 const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
+const multer = require('multer')
 const Songdata = require('./models/songs.js')
 const songsSeed = require('./models/seed.js')
+// const genreTypes = require('./models/genres.js')
 const app = express ();
 const db = mongoose.connection;
 require('dotenv').config()
@@ -25,6 +27,14 @@ app.use(methodOverride('_method'));
 app.get('/songs/new', (req, res) => {
   res.render('new.ejs')
 })
+
+// ////NEW WITH ARRAY///
+// app.get('/songs/new', (req, res) => {
+//   res.render('new.ejs',
+//     {
+//
+//     })
+// })
 
 
 /////CREATE ROUTE////
