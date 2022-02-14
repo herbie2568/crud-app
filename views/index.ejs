@@ -3,15 +3,23 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <title>ChordStrike</title>
   </head>
   <body>
-    <h1>ChordStrike</h1>
-    <input type = 'text' name = 'search' placeholder = 'search...'>
-    <nav>
-      <form action='/songs/new' >
-      <input type='submit' value = 'Add a song' />
+  <%- include('./partials/header.ejs') %>
+
+    <nav class = 'header-btns'>
+      <form class = 'addsong-btn' action='/songs/new' >
+      <input class = 'btn' type='submit' value = 'Add a song' />
     </form>
+    <form class = 'playlist-btn' action='/songs/playlist' >
+    <input class = 'btn' type='submit' value = 'Generate Playlist' />
+    </form>
+    </nav>
+
     <div class="container">
       <% for (let i = 0; i < songsIndex.length; i++) { %>
         <li>
@@ -19,9 +27,8 @@
           <a href = '/songs/<%=songsIndex[i].id%>'><img class = 'indexphoto' src = '<%= songsIndex[i].img %>'></img><a>
           <div> <%=songsIndex[i].title%> <br/> <%=songsIndex[i].artist%>
           </div>
-          <audio controls>
-            <source src= 'cdg.mp3' type= 'audio/mpeg'>
-          </audio><br/>
+
+
           <form action='/songs/<%=songsIndex[i].id; %>/edit' >
           <input type='submit' value = 'EDIT' />
         </form>
@@ -33,9 +40,7 @@
 
     <% } %>
 
-    <audio src = './cdg.mp3' controls>
 
-    </audio><br/>
     </div>
   </body>
 </html>

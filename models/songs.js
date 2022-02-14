@@ -5,7 +5,6 @@ const songSchema = new Schema ({
     title: String,
     artist: String,
     genre: [String],
-    audiofile: String,
     img: String,
     musicvideo: String
 

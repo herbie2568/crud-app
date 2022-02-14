@@ -1,40 +1,53 @@
 const express = require('express');
+const app = express ();
 const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
 const multer = require('multer')
+const bodyParser = require('body-parser')
 const Songdata = require('./models/songs.js')
 const songsSeed = require('./models/seed.js')
-// const genreTypes = require('./models/genres.js')
-const app = express ();
+
 const db = mongoose.connection;
 require('dotenv').config()
 const PORT = process.env.PORT || 3000;
 const MONGODB_URI = process.env.MONGODB_URI;
 mongoose.connect(MONGODB_URI)
 
+
+
+
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
 db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
 db.on('disconnected', () => console.log('mongo disconnected'));
 
 app.use(express.static('public'));
+app.use(express.static('partials'));
 app.use(express.urlencoded({ extended: false }));// extended: false - does not allow nested objects in query strings
 app.use(express.json());
 app.use(methodOverride('_method'));
+app.use(bodyParser.urlencoded({ extended: false }));
 
+///HOMEPAGE ROUTE///
+app.get('/', (req, res) => {
+  res.render('index.html')
+})
 
+////LOGIN ROUTE////
+app.get('/login', (req, res) => {
+  res.render('login.ejs')
+})
+
+///LOGIN POST///
+app.post('/login', (req, res) => {
+  let username = req.body.username;
+  let password = req.body.password;
+  res.send(`Username: ${username} Password: ${password}`)
+})
 
 ////NEW ROUTE////
 app.get('/songs/new', (req, res) => {
   res.render('new.ejs')
 })
-
-// ////NEW WITH ARRAY///
-// app.get('/songs/new', (req, res) => {
-//   res.render('new.ejs',
-//     {
-//
-//     })
-// })
 
 
 /////CREATE ROUTE////

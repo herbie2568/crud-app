@@ -5,10 +5,16 @@
     <title></title>
   </head>
   <body>
+
+    <%- include('./partials/header.ejs') %>
     <h2><%=songsShow.title%></h2>
     <h3><%=songsShow.artist%></h3>
     <h4>Genre: <%=songsShow.genre%></h4>
     <iframe width="560" height="315" src='<%=songsShow.musicvideo%>' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <form action='/songs/<%=songsShow.id; %>/edit' >
+    <input type='submit' value = 'EDIT' />
+  </form>
 
 
   </body>

@@ -1,6 +1,12 @@
 body {
   background: black;
   color: white;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+  font-style: italic;
+  font-size: 3.5em;
 }
 
 a {
@@ -10,10 +16,84 @@ a {
 }
 .container {
   list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  margin-top: 3%;
+  margin-left: 9%;
+}
+
+.logo-cs {
+  display: flex;
+  flex-direction: row;
 }
 
 .indexphoto {
-  width: 25%;
-  border: 1px solid white;
+  width: 80%;
+  border: 2px solid white;
   border-radius: 10px;
+  transition-duration: 0.6s;
+  margin-bottom: 3%;
+}
+
+.indexphoto:hover {
+  transform: scale(1.1)
+}
+
+li {
+  width: 30%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3%;
+}
+.logo {
+  width: 25%;
+}
+
+.searchbar-div {
+  align-self: center;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: row;
+}
+
+.searchbar {
+  padding-top:  13px;
+  padding-bottom: 13px;
+  border: 2px solid grey;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.magglass {
+  height: 45px;
+}
+
+.header-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 17%;
+}
+
+.btn {
+  font-size: 16px;
+  font-family: 'Ubuntu';
+  padding: 10px 30px;
+  /* color: white; */
+  border-radius: 10px;
+  border: 2px solid grey;
+
+
+  transition-duration: 0.4s;
+}
+
+.btn:hover {
+  background-color: #ff914d;
+  cursor: pointer;
+  transform: scale(1.1);
+  border: 2px solid grey;
 }
