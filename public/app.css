@@ -12,32 +12,13 @@ h1 {
 a {
   text-decoration: none;
   color: white;
-  font-size: 2vw;
+  /* font-size: 2vw; */
 }
-.container {
-  list-style-type: none;
-  display: flex;
-  flex-flow: row wrap;
-  text-align: center;
-  margin-top: 3%;
-  margin-left: 9%;
-}
+
 
 .logo-cs {
   display: flex;
   flex-direction: row;
-}
-
-.indexphoto {
-  width: 80%;
-  border: 2px solid white;
-  border-radius: 10px;
-  transition-duration: 0.6s;
-  margin-bottom: 3%;
-}
-
-.indexphoto:hover {
-  transform: scale(1.1)
 }
 
 li {
@@ -49,27 +30,53 @@ header {
   flex-direction: row;
   margin-bottom: 3%;
 }
-.logo {
-  width: 25%;
+
+.logoanchor-div {
+  width: 20%;
 }
+
+.logo {
+  width: 100%;
+  transition-duration: 0.3s;
+  align-self: center;
+}
+
+.logo:hover {
+  transform: scale(1.1)
+}
+.chordstrike {
+  align-self: center;
+}
+
 
 .searchbar-div {
   align-self: center;
   margin-right: 10%;
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 
 .searchbar {
   padding-top:  13px;
   padding-bottom: 13px;
+  padding-left: 5%;
   border: 2px solid grey;
   border-radius: 5px;
   font-size: 20px;
+
 }
 
-.magglass {
-  height: 45px;
+.search-pic {
+  height: 25px;
+  position: absolute;
+  right: 3%;
+  top: 24%;
+}
+
+.search-pic:hover {
+  cursor: pointer;
+  transform: scale(1.2)
 }
 
 .header-btns {
@@ -96,4 +103,55 @@ header {
   cursor: pointer;
   transform: scale(1.1);
   border: 2px solid grey;
+}
+
+.container {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  margin-top: 3%;
+  margin-left: 9%;
+}
+
+.indexphoto {
+  width: 70%;
+  border: 2px solid white;
+  border-radius: 10px;
+  transition-duration: 0.6s;
+  margin-bottom: 3%;
+}
+
+.indexphoto:hover {
+  transform: scale(1.1)
+}
+
+.song-info {
+  margin: 2%;
+}
+
+.artist {
+  color: grey;
+}
+
+.ed-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10%;
+  margin-bottom: 8%;
+}
+
+.edit-btn {
+  font-family: 'Ubuntu';
+  border-radius: 5px;
+  padding: 10% 15%;
+
+}
+
+.delete-btn {
+  font-family: 'Ubuntu';
+  border-radius: 5px;
+  padding: 7%;
+
 }

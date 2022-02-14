@@ -2,11 +2,126 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>Add New Song</title>
   </head>
+  <style>
+    body {
+      background: black;
+      color: white;
+      font-family: 'Ubuntu', sans-serif;
+    }
+    .chordstrike {
+      font-style: italic;
+      font-size: 3.5em;
+    }
+    .logo-cs {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .indexphoto {
+      width: 80%;
+      border: 2px solid white;
+      border-radius: 10px;
+      transition-duration: 0.6s;
+      margin-bottom: 3%;
+    }
+
+    .indexphoto:hover {
+      transform: scale(1.1)
+    }
+
+    li {
+      width: 30%;
+    }
+
+    header {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 3%;
+    }
+
+    .logoanchor-div {
+      width: 20%;
+    }
+
+    .logo {
+      width: 100%;
+      transition-duration: 0.3s;
+      align-self: center;
+    }
+
+    .logo:hover {
+      transform: scale(1.1)
+    }
+    .chordstrike {
+      align-self: center;
+    }
+
+
+    .searchbar-div {
+      align-self: center;
+      margin-right: 10%;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+    }
+
+    .searchbar {
+      padding-top:  13px;
+      padding-bottom: 13px;
+      padding-left: 5%;
+      border: 2px solid grey;
+      border-radius: 5px;
+      font-size: 20px;
+
+    }
+
+    .search-pic {
+      height: 25px;
+      position: absolute;
+      right: 3%;
+      top: 24%;
+    }
+
+    .search-pic:hover {
+      cursor: pointer;
+      transform: scale(1.2)
+    }
+
+    .header-btns {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 17%;
+    }
+
+    .btn {
+      font-size: 16px;
+      font-family: 'Ubuntu';
+      padding: 10px 30px;
+      /* color: white; */
+      border-radius: 10px;
+      border: 2px solid grey;
+
+
+      transition-duration: 0.4s;
+    }
+
+    .btn:hover {
+      background-color: #ff914d;
+      cursor: pointer;
+      transform: scale(1.1);
+      border: 2px solid grey;
+    }
+
+  </style>
   <body>
     <%- include('./partials/header.ejs') %>
-    
+
     <h1>Add New Song</h1>
 
     <form action = '/songs' method = 'POST'>

@@ -24,17 +24,23 @@
       <% for (let i = 0; i < songsIndex.length; i++) { %>
         <li>
 
+          <% if (!songsIndex[i].img) {
+            songsIndex[i].img = './defaulticon.png'
+          } %>
+
           <a href = '/songs/<%=songsIndex[i].id%>'><img class = 'indexphoto' src = '<%= songsIndex[i].img %>'></img><a>
-          <div> <%=songsIndex[i].title%> <br/> <%=songsIndex[i].artist%>
+          <div class = 'song-info'> <%=songsIndex[i].title%> <br/> <span class = 'artist'><%=songsIndex[i].artist%><span>
           </div>
 
 
+        <div class = 'ed-btns'>
           <form action='/songs/<%=songsIndex[i].id; %>/edit' >
-          <input type='submit' value = 'EDIT' />
+          <input class = 'edit-btn' type='submit' value = 'Edit' />
         </form>
           <form action="/songs/<%=songsIndex[i].id%>?_method=DELETE" method="POST">
-          <input type='submit' value = 'DELETE' />
+          <input class = 'delete-btn' type='submit' value = 'Delete' />
         </form>
+        </div>
 
         </li>
 
