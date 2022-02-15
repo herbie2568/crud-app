@@ -44,6 +44,27 @@ app.post('/login', (req, res) => {
   res.send(`Username: ${username} Password: ${password}`)
 })
 
+////PLAYLIST ROUTE///
+app.get('/songs/playlist', (req, res) => {
+  Songdata.find({}, (error, allSongsPlaylist) => {
+    res.render('playlist.ejs', {
+      songsPlaylist: allSongsPlaylist
+    })
+  })
+})
+
+////SHUFFLE ROUTE////
+////PLAYLIST ROUTE///
+app.get('/songs/shuffle', (req, res) => {
+  Songdata.find({}, (error, allSongsShuffle) => {
+    res.render('shuffle.ejs', {
+      songsShuffle: allSongsShuffle
+    })
+  })
+})
+
+
+
 ////NEW ROUTE////
 app.get('/songs/new', (req, res) => {
   res.render('new.ejs')
@@ -92,6 +113,7 @@ app.delete('/songs/:id', (req, res)=>{
         res.redirect('/songs');//
     });
 });
+
 
 
 ////INDEX FILE ROUTE////

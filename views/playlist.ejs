@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <%- include('./partials/head.ejs') %>
+    <title></title>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs') %>
+
+      <div class = 'playlist'>
+        <h1>Generate Playlist</h1>
+
+        <input class = '' type='text' name = 'artist' placeholder = '# of songs' value = '<%=songsEdit.artist%>'/>
+
+      <% songsPlaylist = songsPlaylist.sort(() => Math.random()-0.5) %>
+
+      <div class="container">
+        <% for (let i = 0; i < songsPlaylist.length; i++) { %>
+          <li>
+
+            <% if (!songsPlaylist[i].img) {
+              songsPlaylist[i].img = 'https://i.imgur.com/03uVfdA.png'
+            } %>
+
+            <a href = '/songs/<%=songsPlaylist[i].id%>'><img class = 'indexphoto' src = '<%= songsPlaylist[i].img %>'></img><a>
+            <div class = 'song-info'> <%=songsPlaylist[i].title%> <br/> <span class = 'artist'><%=songsPlaylist[i].artist%><span>
+            </div>
+
+
+          <div class = 'ed-btns'>
+            <form class = 'edit-btn-form' action='/songs/<%=songsPlaylist[i].id; %>/edit' >
+            <input class = 'edit-btn' type='submit' value = 'Edit' />
+          </form>
+            <form class = 'delete-btn-form' action="/songs/<%=songsPlaylist[i].id%>?_method=DELETE" method="POST">
+            <input class = 'delete-btn' type='submit' value = 'Delete' />
+          </form>
+          </div>
+
+          </li>
+
+      <% } %>
+
+
+      </div>
+      </div>
+  </body>
+</html>

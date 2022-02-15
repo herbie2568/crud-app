@@ -2,134 +2,55 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <%- include('./partials/head.ejs') %>
     <title></title>
-    <style>
-      body {
-        background: black;
-        color: white;
-        font-family: 'Ubuntu', sans-serif;
-      }
-      .chordstrike {
-        font-style: italic;
-        font-size: 3.5em;
-      }
-      .logo-cs {
-        display: flex;
-        flex-direction: row;
-      }
 
-      .indexphoto {
-        width: 80%;
-        border: 2px solid white;
-        border-radius: 10px;
-        transition-duration: 0.6s;
-        margin-bottom: 3%;
-      }
-
-      .indexphoto:hover {
-        transform: scale(1.1)
-      }
-
-      li {
-        width: 30%;
-      }
-
-      header {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 3%;
-      }
-
-      .logoanchor-div {
-        width: 20%;
-      }
-
-      .logo {
-        width: 100%;
-        transition-duration: 0.3s;
-        align-self: center;
-      }
-
-      .logo:hover {
-        transform: scale(1.1)
-      }
-      .chordstrike {
-        align-self: center;
-      }
-
-
-      .searchbar-div {
-        align-self: center;
-        margin-right: 10%;
-        display: flex;
-        flex-direction: row;
-        position: relative;
-      }
-
-      .searchbar {
-        padding-top:  13px;
-        padding-bottom: 13px;
-        padding-left: 5%;
-        border: 2px solid grey;
-        border-radius: 5px;
-        font-size: 20px;
-
-      }
-
-      .search-pic {
-        height: 25px;
-        position: absolute;
-        right: 3%;
-        top: 24%;
-      }
-
-      .search-pic:hover {
-        cursor: pointer;
-        transform: scale(1.2)
-      }
-
-      .header-btns {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 17%;
-      }
-
-      .btn {
-        font-size: 16px;
-        font-family: 'Ubuntu';
-        padding: 10px 30px;
-        /* color: white; */
-        border-radius: 10px;
-        border: 2px solid grey;
-
-
-        transition-duration: 0.4s;
-      }
-
-      .btn:hover {
-        background-color: #ff914d;
-        cursor: pointer;
-        transform: scale(1.1);
-        border: 2px solid grey;
-      }
-
-    </style>
   </head>
   <body>
 
-    <%- include('./partials/header.ejs') %>
-    <h2><%=songsShow.title%></h2>
-    <h3><%=songsShow.artist%></h3>
-    <h4>Genre: <%=songsShow.genre%></h4>
-    <iframe width="560" height="315" src='<%=songsShow.musicvideo%>' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class = 'stickybar'>
+    <header>
 
-    <form action='/songs/<%=songsShow.id; %>/edit' >
-    <input type='submit' value = 'EDIT' />
-  </form>
+    <div class = 'logo-cs'>
+      <div class = 'logoanchor-div'>
+    <a class = 'logoanchor' href = '/songs'><img class = 'logo' src = 'https://i.imgur.com/43RHQ00.png'></img></a>
+      </div>
+    <h1 class = 'chordstrike'>ChordStrike</h1>
+    </div>
+    <div class = 'searchbar-div'>
+
+    <input class = 'searchbar' type = 'text' name = 'search' placeholder = 'search...' value = ''>
+    <img class = 'search-pic' src = 'https://www.freeiconspng.com/thumbs/magnifying-glass-icon/magnifying-glass-icon-13.png'></img>
+      </div>
+    </header>
+
+    <nav class = 'header-btns'>
+
+      <div class = 'show-buttons'>
+      <form action='/songs' >
+      <input class = 'btn' type='submit' value = 'Back to Library' />
+    </form>
+      <form action='/songs/<%=songsShow.id; %>/edit' >
+      <input class = 'btn' type='submit' value = 'Edit song details' />
+    </form>
+    </div>
+    </form>
+    </nav>
+    </div>
+    <div class = 'song-show'>
+      <!-- <h1>Song Details</h1> -->
+      <div class = 'show-player'>
+    <div class = 'show-title'><%=songsShow.title%></div>
+    <div class = 'show-artist'><%=songsShow.artist%></div>
+    <div class = 'show-genre'>Genre: <%=songsShow.genre%></div>
+
+    <div class = 'mv-div'>
+    <iframe class = 'mv' width="560" height="315" src='<%=songsShow.musicvideo%>' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  </div>
+
+
+</div>
 
 
   </body>

@@ -11,21 +11,15 @@
   <body>
   <%- include('./partials/header.ejs') %>
 
-    <nav class = 'header-btns'>
-      <form class = 'addsong-btn' action='/songs/new' >
-      <input class = 'btn' type='submit' value = 'Add a song' />
-    </form>
-    <form class = 'playlist-btn' action='/songs/playlist' >
-    <input class = 'btn' type='submit' value = 'Generate Playlist' />
-    </form>
-    </nav>
-
+<div class = 'index-container'>
+<h1>Your Library</h1>
     <div class="container">
+
       <% for (let i = 0; i < songsIndex.length; i++) { %>
         <li>
 
           <% if (!songsIndex[i].img) {
-            songsIndex[i].img = './defaulticon.png'
+            songsIndex[i].img = 'https://i.imgur.com/03uVfdA.png'
           } %>
 
           <a href = '/songs/<%=songsIndex[i].id%>'><img class = 'indexphoto' src = '<%= songsIndex[i].img %>'></img><a>
@@ -34,10 +28,10 @@
 
 
         <div class = 'ed-btns'>
-          <form action='/songs/<%=songsIndex[i].id; %>/edit' >
+          <form class = 'edit-btn-form' action='/songs/<%=songsIndex[i].id; %>/edit' >
           <input class = 'edit-btn' type='submit' value = 'Edit' />
         </form>
-          <form action="/songs/<%=songsIndex[i].id%>?_method=DELETE" method="POST">
+          <form class = 'delete-btn-form' action="/songs/<%=songsIndex[i].id%>?_method=DELETE" method="POST">
           <input class = 'delete-btn' type='submit' value = 'Delete' />
         </form>
         </div>
@@ -48,5 +42,17 @@
 
 
     </div>
+  </div>
+    <footer>
+      <ul>
+          <li><a href = '/songs'>Home</a></li>
+          <li><a href = '/about'>About</a></li>
+          <li><a href = '/songs/new'>Add Song</a></li>
+          <li><a href = '/playlist'>Generate Playlist</a></li>
+
+      </ul>
+
+
+    </footer>
   </body>
 </html>
