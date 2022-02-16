@@ -2,6 +2,7 @@ body {
   background: black;
   color: white;
   font-family: 'Ubuntu', sans-serif;
+  margin: 0;
 }
 h1 {
   font-size: 2em;
@@ -32,6 +33,8 @@ header {
 .stickybar {
   position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
   background-color: black;
   z-index: 999;
   opacity: 0.9;
@@ -152,10 +155,21 @@ header {
   margin-left: 9%;
 }
 
+.my-library {
+  text-align: center;
+  margin-bottom: 1%;
+  /* font-weight: 500; */
+}
+
+.song-number {
+  text-align: center;
+  font-size: 1.1em;
+}
+
 .indexphoto {
   width: 70%;
   /* border: 2px solid white; */
-  border-radius: 10px;
+  border-radius: 5px;
   transition-duration: 0.6s;
   margin-bottom: 3%;
 }
@@ -293,3 +307,224 @@ header {
   background: #333333;
 
 } */
+
+.homepage {
+  background: #ff914d;
+}
+
+.logo-cshome {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-self: center;
+
+}
+
+.stickybarhome {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0
+
+}
+
+
+.logohome {
+  width: 100%;
+}
+
+.logoanchor-divhome {
+  width: 15%;
+}
+
+.chordstrikehome {
+  font-style: italic;
+
+}
+
+.signup {
+  margin-right: 10%;
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+  align-self: center;
+}
+
+.slogan-home {
+  margin-top: 38%;
+  text-align: center;
+  font-size: 4em;
+  color: black;
+  font-weight: 600;
+  margin-bottom: 2%;
+}
+
+.slogan-small1 {
+  margin-left: 20%;
+  font-size: 1.3em;
+  color: black;
+  font-weight: 500;
+}
+
+.slogan-small2 {
+  margin-left: 50%;
+  font-size: 1.3em;
+  color: black;
+  font-weight: 500;
+}
+
+
+.get-btn {
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Ubuntu';
+  padding: 10px 30px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  font-weight: 500;
+  border: 2px solid grey;
+  transition-duration: 0.4s;
+}
+
+.get-btn:hover{
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transform: scale(1.1);
+  border: 2px solid grey;
+}
+
+.get-btnform {
+  text-align: center;
+  margin-top: 2%;
+}
+
+.pageone {
+  height: 60vh;
+}
+
+.pagetwo {
+  height: 120vh;
+  background-color: black;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.marker {
+  color: black;
+}
+
+.elite1 {
+  font-size: 3.5em;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 7%;
+  text-align: center;
+  margin-top: 35%;
+}
+
+.elite2-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
+.elite2 {
+  color: white;
+  width: 75%;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 5%;
+}
+
+.upload-img {
+  width: 50%;
+  margin-bottom: 10%;
+}
+
+.info-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btn2 {
+  font-size: 16px;
+  font-family: 'Ubuntu';
+  padding: 10px 30px;
+  /* color: white; */
+  border-radius: 20px;
+  border: 2px solid grey;
+  transition-duration: 0.4s;
+}
+.btn2:hover {
+  background-color: #ff914d;
+  cursor: pointer;
+  transform: scale(1.1);
+  border: 2px solid grey;
+}
+
+footer {
+  background-color: #ff914d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+
+.footer-ul {
+  display: flex;
+  flex-direction: row;
+  margin-right: 15%;
+  width: 80%;
+  gap: 5%
+
+}
+
+.footer-li {
+  list-style-type: none;
+  color: black;
+  text-align: center;
+  font-size: .8em;
+}
+
+.logo-csfooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.logoanchor-divfooter {
+  width: 10%;
+  align-self: center;
+  margin-left: 2%;
+  margin-right: 1%;
+}
+
+.logofooter {
+  width: 100%;
+
+}
+
+.chordstrikefooter {
+  color: white;
+  font-weight: 700;
+  font-size: 1.5em;
+  font-style: italic;
+  align-self: center;
+}

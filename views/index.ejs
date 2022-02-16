@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -12,7 +13,8 @@
   <%- include('./partials/header.ejs') %>
 
 <div class = 'index-container'>
-<h1>Your Library</h1>
+<h1 class = 'my-library'>My Library</h1>
+<div class = 'song-number'><%=songsIndex.length%> songs</div>
     <div class="container">
 
       <% for (let i = 0; i < songsIndex.length; i++) { %>

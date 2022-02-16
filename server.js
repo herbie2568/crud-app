@@ -1,11 +1,19 @@
 const express = require('express');
 const app = express ();
 const methodOverride  = require('method-override');
+const session = require('express-session')
 const mongoose = require ('mongoose');
+const bcrypt = require('bcrypt')
 const multer = require('multer')
 const bodyParser = require('body-parser')
 const Songdata = require('./models/songs.js')
 const songsSeed = require('./models/seed.js')
+const User = require('./models/users.js')
+const userController = require('./controllers/users_controller.js')
+const sessionsController = require('./controllers/sessions_controller.js')
+app.use('/sessions', sessionsController)
+
+
 
 const db = mongoose.connection;
 require('dotenv').config()
@@ -22,19 +30,49 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 app.use(express.static('public'));
 app.use(express.static('partials'));
-app.use(express.urlencoded({ extended: false }));// extended: false - does not allow nested objects in query strings
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use('/users', userController)
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false
+  })
+)
 
 ///HOMEPAGE ROUTE///
 app.get('/', (req, res) => {
-  res.render('index.html')
+  res.render('home.ejs',
+  {
+    currentUser: true
+  })
 })
+
+////NEW USER ROUTE////
+app.get('/new', (req, res) => {
+  User.find({}, (error, createNewUser) => {
+  res.render('sessions-new.ejs')
+})
+})
+
+app.get('/new', (req, res) => {
+  User.find({}, (error, createNewUser) => {
+  res.render('users/new.ejs')
+})
+})
+
+
 
 ////LOGIN ROUTE////
 app.get('/login', (req, res) => {
-  res.render('login.ejs')
+  res.render('sessions-new.ejs')
+})
+
+app.get('/signup', (req, res) => {
+  res.render('users/new.ejs')
 })
 
 ///LOGIN POST///
@@ -48,17 +86,28 @@ app.post('/login', (req, res) => {
 app.get('/songs/playlist', (req, res) => {
   Songdata.find({}, (error, allSongsPlaylist) => {
     res.render('playlist.ejs', {
-      songsPlaylist: allSongsPlaylist
+      songsPlaylist: allSongsPlaylist,
+      currentUser: true
+    })
+  })
+})
+
+////GENERATE PLAYLIST ROUTE////
+app.get('/generate-playlist', (req, res) => {
+  Songdata.find({}, (error, makePlaylist) => {
+    res.render('playlistpage.ejs', {
+      songsPlaylistPage: makePlaylist,
+      currentUser: true
     })
   })
 })
 
 ////SHUFFLE ROUTE////
-////PLAYLIST ROUTE///
 app.get('/songs/shuffle', (req, res) => {
   Songdata.find({}, (error, allSongsShuffle) => {
     res.render('shuffle.ejs', {
-      songsShuffle: allSongsShuffle
+      songsShuffle: allSongsShuffle,
+      currentUser: true
     })
   })
 })
@@ -67,7 +116,10 @@ app.get('/songs/shuffle', (req, res) => {
 
 ////NEW ROUTE////
 app.get('/songs/new', (req, res) => {
-  res.render('new.ejs')
+  res.render('new.ejs', {
+    currentUser: true
+  })
+
 })
 
 
@@ -82,6 +134,7 @@ app.post('/songs/', (req, res) => {
 app.get('/songs/:id', (req, res) => {
   Songdata.findById(req.params.id, (err, foundSong) => {
     res.render('show.ejs', {
+      currentUser: true,
       songsShow: foundSong
     })
   })
@@ -93,6 +146,7 @@ app.get('/songs/:id/edit', (req, res)=>{
         res.render(
     		'edit.ejs',
     		{
+          currentUser: true,
     			songsEdit: foundSong
     		}
     	);
@@ -120,7 +174,8 @@ app.delete('/songs/:id', (req, res)=>{
 app.get('/songs', (req, res) => {
   Songdata.find({}, (error, allSongs) => {
     res.render('index.ejs', {
-      songsIndex: allSongs
+      songsIndex: allSongs,
+      currentUser: true,
     })
   })
 })

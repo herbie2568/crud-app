@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <%- include('./partials/head.ejs') %>
+    <title></title>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs') %>
+
+      <div class = 'playlist'>
+        <h1>Generate Playlist</h1>
+
+        <form action = '/generate-playlist'>
+        <input class = 'number-songs' type='text' placeholder = 'number of songs..' value = ''/>
+        <input type = 'submit' value = 'make playlist'>
+      </form>
+
+    <% let numberOfSongs = document.getElementById('songNumber').value %>
+      <div><%=numberOfSongs%></div>
+
+
+      <% songsPlaylistPage = songsPlaylistPage.sort(() => Math.random()-0.5) %>
+
+
+      <div class="container">
+        <% for (let i = 0; i < songsPlaylistPage.length; i++) { %>
+          <li>
+
+            <% if (!songsPlaylistPage[i].img) {
+              songsPlaylistPage[i].img = 'https://i.imgur.com/03uVfdA.png'
+            } %>
+
+            <a href = '/songs/<%=songsPlaylistPage[i].id%>'><img class = 'indexphoto' src = '<%= songsPlaylistPage[i].img %>'></img><a>
+            <div class = 'song-info'> <%=songsPlaylistPage[i].title%> <br/> <span class = 'artist'><%=songsPlaylistPage[i].artist%><span>
+            </div>
+
+
+          <div class = 'ed-btns'>
+            <form class = 'edit-btn-form' action='/songs/<%=songsPlaylistPage[i].id; %>/edit' >
+            <input class = 'edit-btn' type='submit' value = 'Edit' />
+          </form>
+            <form class = 'delete-btn-form' action="/songs/<%=songsPlaylistPage[i].id%>?_method=DELETE" method="POST">
+            <input class = 'delete-btn' type='submit' value = 'Delete' />
+          </form>
+          </div>
+
+          </li>
+
+      <% } %>
+
+
+      </div>
+      </div>
+  </body>
+</html>

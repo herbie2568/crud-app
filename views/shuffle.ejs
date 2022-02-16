@@ -9,7 +9,8 @@
     <%- include('./partials/header.ejs') %>
 
     <div class = 'index-container'>
-    <h1>Your Library</h1>
+    <h1 class = 'my-library'>My Library</h1>
+    <div class = 'song-number'><%=songsShuffle.length%> songs</div>
       <div class="container">
 
           <% songsShuffle = songsShuffle.sort(() => Math.random()-0.5) %>

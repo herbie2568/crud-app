@@ -11,7 +11,10 @@
       <div class = 'playlist'>
         <h1>Generate Playlist</h1>
 
-        <input class = '' type='text' name = 'artist' placeholder = '# of songs' value = '<%=songsEdit.artist%>'/>
+        <form action = '/generate-playlist'>
+        <input class = 'number-songs' name = 'songNumber' type='text' placeholder = 'number of songs..' id = 'songNumber' value = ''/>
+        <input type = 'submit' value = 'make playlist'>
+      </form>
 
       <% songsPlaylist = songsPlaylist.sort(() => Math.random()-0.5) %>
 

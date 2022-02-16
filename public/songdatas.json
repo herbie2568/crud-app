@@ -1,0 +1,357 @@
+[{
+  "_id": {
+    "$oid": "6208c439e16003dacf59d367"
+  },
+  "title": "Zombie!",
+  "artist": "Orla Gartland",
+  "genre": [
+    " indie",
+    " pop"
+  ],
+  "audiofile": "",
+  "img": "https://images.genius.com/44d666a66e05b6b20962c50789fe2004.1000x1000x1.png",
+  "musicvideo": "https://www.youtube.com/embed/JpZv3BV1jxE",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6208c505e16003dacf59d36b"
+  },
+  "title": "Ain't Together",
+  "artist": "King Princess",
+  "genre": [
+    "pop"
+  ],
+  "audiofile": "",
+  "img": "https://i.scdn.co/image/ab67616d0000b2734d3a7949a831a6b1a78f8fb6",
+  "musicvideo": "https://www.youtube.com/embed/g-DeBDjIe5I",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6208c56be16003dacf59d36e"
+  },
+  "title": "Dancing Queen",
+  "artist": "ABBA",
+  "genre": [
+    "pop",
+    "world"
+  ],
+  "audiofile": "",
+  "img": "https://static.stereogum.com/uploads/2019/10/ABBA-Dancing-Queen-1570816662.jpeg",
+  "musicvideo": "https://www.youtube.com/embed/xFrGuyw1V8s",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62097ef6530d735e7f9dbb1a"
+  },
+  "title": "Who Is Gonna Be The One",
+  "artist": "Jinjer",
+  "genre": [
+    " country",
+    " metal"
+  ],
+  "audiofile": "",
+  "img": "https://f4.bcbits.com/img/a1203161215_10.jpg",
+  "musicvideo": "https://www.youtube.com/embed/U6rv5qi8-8s",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62097fae530d735e7f9dbb1f"
+  },
+  "title": "Landslide",
+  "artist": "Fleetwood Mac",
+  "genre": [
+    " blues",
+    " rock"
+  ],
+  "audiofile": "",
+  "img": "https://i.scdn.co/image/ab67616d0000b2734fb043195e8d07e72edc7226",
+  "musicvideo": "https://www.youtube.com/embed/WM7-PYtXtJM",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62098019530d735e7f9dbb22"
+  },
+  "title": "King Kunta",
+  "artist": "Kendrick Lamar",
+  "genre": [
+    " hip-hop",
+    " rap"
+  ],
+  "audiofile": "",
+  "img": "https://images.genius.com/6c4cde12a02ad49bebff62799680b04e.1000x1000x1.png",
+  "musicvideo": "https://www.youtube.com/embed/hRK7PVJFbS8",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6209d387190b8834d38f914d"
+  },
+  "title": "I Was A Teenage Anarchist",
+  "artist": "Against Me!",
+  "genre": [
+    " punk",
+    " rock"
+  ],
+  "img": "https://i.scdn.co/image/ab67616d0000b273bb27f957d83159f06ee18374",
+  "musicvideo": "https://www.youtube.com/embed/c7RUeMCZL3Q",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620a6de56573b21ef12ed218"
+  },
+  "title": "Comme Des Garcons (Like The Boys",
+  "artist": "Rina Sawayama",
+  "genre": [
+    " dance",
+    " disco",
+    " pop"
+  ],
+  "img": "https://m.media-amazon.com/images/I/91hNJi+2gyL._SL1500_.jpg",
+  "musicvideo": "https://www.youtube.com/embed/uv5i5yg-zNc"
+},{
+  "_id": {
+    "$oid": "620a7e350eaef3fc39c86211"
+  },
+  "title": "Delicious (feat. Tommy Cash)",
+  "artist": "Charli XCX, Tommy Cash",
+  "genre": [
+    " dance",
+    " electronic",
+    " pop"
+  ],
+  "img": "https://images.genius.com/239f1c3500025cf2c0b9f3c614200332.1000x1000x1.png",
+  "musicvideo": "https://www.youtube.com/embed/LxnFaq5SaqI",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620a81a70eaef3fc39c86225"
+  },
+  "title": "Number One Fan",
+  "artist": "MUNA",
+  "genre": [
+    " dance",
+    " indie",
+    " pop"
+  ],
+  "img": "https://media.pitchfork.com/photos/5d6eaa87b34908000800ff8c/1:1/w_450%2Cc_limit/muna_savestheworld.jpg",
+  "musicvideo": "https://www.youtube.com/embed/Wqf-U_fibV0",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620a87ce0eaef3fc39c86257"
+  },
+  "title": "Thank God I'm Not You",
+  "artist": "Himalayas",
+  "genre": [
+    " alternative",
+    " rock"
+  ],
+  "img": "https://is4-ssl.mzstatic.com/image/thumb/Music115/v4/4b/0f/ab/4b0fabd4-072d-7d68-1f69-604e7663c95d/067003231862.jpg/400x400bb.jpg",
+  "musicvideo": "https://www.youtube.com/embed/J_TL02vGQaM",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620a88c80eaef3fc39c86262"
+  },
+  "title": "Kyoto",
+  "artist": "Phoebe Bridgers",
+  "genre": [
+    " indie",
+    " pop"
+  ],
+  "img": "https://media.pitchfork.com/photos/5ee923f47bb7acb328d5683d/1:1/w_600/Punisher%20_Phoebe%20Bridgers.jpg",
+  "musicvideo": "https://www.youtube.com/embed/Tw0zYd0eIlk",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620aa094df01b781f6729fc7"
+  },
+  "title": "Impossible",
+  "artist": "Nothing But Thieves",
+  "genre": [
+    " alternative",
+    " rock"
+  ],
+  "img": "https://i.scdn.co/image/ab67616d0000b27334daba33a92a2c66ce8f5183",
+  "musicvideo": "https://www.youtube.com/embed/Kg6aD8EGcKw",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620aa0f7df01b781f6729fca"
+  },
+  "title": "People",
+  "artist": "The 1975",
+  "genre": [
+    " alternative",
+    " punk",
+    " rock"
+  ],
+  "img": "https://images.genius.com/261763fada8478426658c8872593532b.1000x1000x1.jpg",
+  "musicvideo": "https://www.youtube.com/embed/EKdPxXWm7Jg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620aa1b6df01b781f6729fcd"
+  },
+  "title": "(One of Those) Crazy Girls",
+  "artist": "Paramore",
+  "genre": [
+    " alternative",
+    " pop",
+    " rock"
+  ],
+  "img": "http://images.genius.com/1842073d4a54bd2ebc1c6f85cdf13cc7.1000x1000x1.jpg",
+  "musicvideo": "https://www.youtube.com/embed/5ZbKPERsjQs",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620aa33a03d6d7af46d7c141"
+  },
+  "title": "Wayne",
+  "artist": "Des Rocs",
+  "genre": [
+    " alternative",
+    " rock"
+  ],
+  "img": "https://i.scdn.co/image/ab67616d0000b2732cab8058f7adcae425533386",
+  "musicvideo": "https://www.youtube.com/embed/rXYnYsFxaHE",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620aa34903d6d7af46d7c144"
+  },
+  "title": "Womanizer",
+  "artist": "Britney Spears",
+  "genre": [
+    " dance",
+    " pop"
+  ],
+  "img": "https://m.media-amazon.com/images/M/MV5BMmE1ZjE3NzMtZTVkNy00ZTdlLTk4MzQtYzFiZGNiYmVkNjk3XkEyXkFqcGdeQXVyNDQ5MDYzMTk@._V1_.jpg",
+  "musicvideo": "https://www.youtube.com/embed/rMqayQ-U74s",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620aa35103d6d7af46d7c147"
+  },
+  "title": "Winaloto",
+  "artist": "Tommy Cash",
+  "genre": [
+    " hip-hop",
+    " rap"
+  ],
+  "img": "https://i.scdn.co/image/ab67616d0000b27358c18a053f47682d0d042dfb",
+  "musicvideo": "https://www.youtube.com/embed/3OGMrZKIjKU",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620acfca86cc1944c31b27f4"
+  },
+  "title": "The Joke",
+  "artist": "Brandi Carlile",
+  "genre": [
+    "  folk",
+    " rock"
+  ],
+  "img": "https://media.npr.org/assets/img/2017/11/13/brandicarlile_btwify_lores_sq-acc72bc3d7c820f0995fa924abbae5d6f71c081b.jpg",
+  "musicvideo": "https://www.youtube.com/embed/5r6A2NexF88",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620af24986cc1944c31b2832"
+  },
+  "title": "Blood",
+  "artist": "In This Moment",
+  "genre": [
+    " alternative",
+    " metal"
+  ],
+  "img": "https://m.media-amazon.com/images/I/81SDSiIGxdL._SL1500_.jpg",
+  "musicvideo": "https://www.youtube.com/embed/5ZF5m-vmDzM",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620bb40986cc1944c31b286c"
+  },
+  "title": "Exit Music (For A Film)",
+  "artist": "Radiohead",
+  "genre": [
+    " alternative",
+    " rock"
+  ],
+  "img": "https://images.genius.com/d114d8bb4c110efe7a773544694169a1.1000x1000x1.png",
+  "musicvideo": "https://www.youtube.com/embed/Bf01riuiJWA",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620bb48086cc1944c31b2870"
+  },
+  "title": "Training Wheels",
+  "artist": "Melanie Martinez",
+  "genre": [
+    " electronic",
+    " pop"
+  ],
+  "img": "https://images.rapgenius.com/7dc1807582813cb636bbe40a51fad9da.422x420x1.png",
+  "musicvideo": "https://www.youtube.com/embed/17lKhyL4qUI",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620bb4c886cc1944c31b2873"
+  },
+  "title": "Taxi ",
+  "artist": "Nova Twins",
+  "genre": [
+    " punk",
+    " rock"
+  ],
+  "img": "https://i1.sndcdn.com/artworks-000647463184-ooh3j4-t500x500.jpg",
+  "musicvideo": "https://www.youtube.com/embed/f3wehXImS50",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620bb58f86cc1944c31b2876"
+  },
+  "title": "THERAPY!",
+  "artist": "Lauren Sanderson",
+  "genre": [
+    " pop",
+    " punk",
+    " rock"
+  ],
+  "img": "https://the360report.com/wp-content/uploads/2022/01/1643638217_Lauren-Sanderson-%E2%80%93-THERAPY-Mp3-Download.jpg",
+  "musicvideo": "https://www.youtube.com/embed/XPtEqEFDXg4",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620bb65f86cc1944c31b2879"
+  },
+  "title": "damn Right",
+  "artist": "AUDREY NUNA",
+  "genre": [
+    " hip-hop",
+    " indie",
+    " R&B/soul",
+    " rap"
+  ],
+  "img": "https://i.scdn.co/image/ab67616d0000b273e4287c93bd397648ba87d5f8",
+  "musicvideo": "https://www.youtube.com/embed/kbBL3e00qrI",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620bb76b86cc1944c31b2881"
+  },
+  "title": "Drew Barrymore",
+  "artist": "SZA",
+  "genre": [
+    " pop",
+    " R&B/soul"
+  ],
+  "img": "https://images.genius.com/c4f225ffe9ed2762145f257dba814978.1000x1000x1.png",
+  "musicvideo": "https://www.youtube.com/embed/dp45V_M4Akw",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "620bd62abbd76a3fc1b0ff80"
+  },
+  "genre": [],
+  "__v": 0
+}]
