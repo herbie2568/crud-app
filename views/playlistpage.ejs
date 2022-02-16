@@ -11,20 +11,23 @@
       <div class = 'playlist'>
         <h1>Generate Playlist</h1>
 
-        <form action = '/generate-playlist'>
-        <input class = 'number-songs' type='text' placeholder = 'number of songs..' value = ''/>
-        <input type = 'submit' value = 'make playlist'>
+        <form class = 'make-playlist' action = '/generate-playlist'>
+        <div>
+        <input class = 'number-songs' name = 'songNumber' type='text' placeholder = 'number of songs..' id = 'songNumber' />
+      </div>
+        <input class = 'playlist-btn2' type = 'submit' value = 'make playlist'>
       </form>
 
-    <% let numberOfSongs = document.getElementById('songNumber').value %>
-      <div><%=numberOfSongs%></div>
+      <div> <%=numberOfSongs%> </div>
+
+
 
 
       <% songsPlaylistPage = songsPlaylistPage.sort(() => Math.random()-0.5) %>
 
 
       <div class="container">
-        <% for (let i = 0; i < songsPlaylistPage.length; i++) { %>
+        <% for (let i = 0; i < 10; i++) { %>
           <li>
 
             <% if (!songsPlaylistPage[i].img) {

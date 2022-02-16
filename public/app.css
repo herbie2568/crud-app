@@ -41,7 +41,9 @@ header {
 
 }
 .logoanchor-div {
-  width: 20%;
+  width: 17%;
+  align-self: center;
+  margin-left: 2%;
 }
 
 .logo {
@@ -227,6 +229,44 @@ header {
   color: white;
 }
 
+.make-playlist {
+  text-align: center;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1%;
+}
+
+.number-songs {
+  padding: 5px 10px;
+    align-self: center;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-top: 1%;
+  font-family: 'Ubuntu';
+
+
+}
+
+.playlist-btn2 {
+  font-size: 12px;
+  font-family: 'Ubuntu';
+  padding: 8px 10px;
+  /* color: white; */
+  border-radius: 20px;
+  /* border: 2px solid grey; */
+  transition-duration: 0.4s;
+  background-color: #ff914d;
+  align-self: center;
+
+}
+
+.playlist-btn2:hover {
+  background-color: #ff914d;
+  cursor: pointer;
+  transform: scale(1.1);
+  border: 2px solid grey;
+}
 .newsong-form {
   text-align: center;
 }
@@ -237,6 +277,17 @@ header {
    border-radius: 10px;
    margin-top: 1%;
    font-family: 'Ubuntu'
+}
+
+.playlist-container {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  margin-top: 3%;
+  margin-left: 9%;
+  display: none;
+
 }
 
 .genremenu {
@@ -366,15 +417,15 @@ header {
 .slogan-small1 {
   margin-left: 20%;
   font-size: 1.3em;
-  color: black;
-  font-weight: 500;
+  color: white;
+  font-weight: 400;
 }
 
 .slogan-small2 {
   margin-left: 50%;
   font-size: 1.3em;
-  color: black;
-  font-weight: 500;
+  color: white;
+  font-weight: 400;
 }
 
 
@@ -409,7 +460,7 @@ header {
 }
 
 .pagetwo {
-  height: 120vh;
+  height: 100vh;
   background-color: black;
 
   bottom: 0;
@@ -422,7 +473,7 @@ header {
 }
 
 .elite1 {
-  font-size: 3.5em;
+  font-size: 3.2em;
   color: white;
   font-weight: 600;
   margin-bottom: 7%;
@@ -486,14 +537,16 @@ footer {
   justify-content: space-between;
   padding-top: 0.5%;
   padding-bottom: 0.5%;
+  height: 50px;
 }
 
 .footer-ul {
   display: flex;
   flex-direction: row;
-  margin-right: 15%;
+  margin-right: 10%;
   width: 80%;
-  gap: 5%
+  gap: 5%;
+  align-self: center;
 
 }
 
@@ -502,12 +555,18 @@ footer {
   color: black;
   text-align: center;
   font-size: .8em;
+  transition-duration: 0.3s
 }
 
+.footer-li:hover {
+  cursor: pointer;
+  /* transform: scale(1.05); */
+  color: white;
+}
 .logo-csfooter {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  width: 6%;
+  align-self: center;
+  margin-left: 2%;
 }
 .logoanchor-divfooter {
   width: 10%;
@@ -521,10 +580,71 @@ footer {
 
 }
 
-.chordstrikefooter {
-  color: white;
+.copyright {
+  color: black;
+  font-size: 0.7em;
+  align-self: center;
+  margin-right: 5%;
+}
+
+.logoanchor-divnew {
+  width: 7%;
+    align-self: center;
+}
+
+.logonew {
+  width: 100%;
+
+}
+
+.chordstrikenew {
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 2em;
   font-style: italic;
   align-self: center;
+}
+
+.logo-csnew {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5%;
+  /* margin-right: 5%; */
+}
+
+.newaccount {
+  margin-bottom: 5%;
+}
+
+.signup-form {
+  text-align: center;
+}
+
+.passwordnew {
+  margin-bottom: 2%;
+  padding: 5px 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-top: 1%;
+  font-family: 'Ubuntu'
+}
+
+.signup-text {
+  margin-bottom: 2%;
+  font-size: 0.8em;
+}
+
+.terms {
+  color: #f46530;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.terms:hover {
+  color: #ff914d;
+
+}
+
+.accountalready {
+  margin-top: 2%;
 }

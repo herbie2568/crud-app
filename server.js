@@ -9,6 +9,7 @@ const bodyParser = require('body-parser')
 const Songdata = require('./models/songs.js')
 const songsSeed = require('./models/seed.js')
 const User = require('./models/users.js')
+const Songnumber = require('./models/numberofsongs.js')
 const userController = require('./controllers/users_controller.js')
 const sessionsController = require('./controllers/sessions_controller.js')
 app.use('/sessions', sessionsController)
@@ -83,23 +84,60 @@ app.post('/login', (req, res) => {
 })
 
 ////PLAYLIST ROUTE///
+// app.get('/songs/playlist', (req, res) => {
+//   Songdata.find({}, (error, allSongsPlaylist) => {
+//     res.render('playlist.ejs', {
+//       songsPlaylist: allSongsPlaylist,
+//       currentUser: true
+//     })
+//   })
+// })
+
 app.get('/songs/playlist', (req, res) => {
   Songdata.find({}, (error, allSongsPlaylist) => {
-    res.render('playlist.ejs', {
+    Songnumber.find({}, (error, makeSongsPlaylist) => {
+      res.render('playlist.ejs', {
       songsPlaylist: allSongsPlaylist,
+      numberOfSongs: makeSongsPlaylist,
       currentUser: true
     })
   })
 })
+})
+
+app.post('/songs/playlist', (req, res) => {
+  Songnumber.create(req.body, (error, createdNumber) => {
+    res.redirect('/generate-playlist')
+  })
+})
+
+app.post('/generate-playlist', (req, res) => {
+  Songnumber.create(req.body, (error, createdNumber) => {
+    res.redirect('/generate-playlist')
+  })
+})
+
 
 ////GENERATE PLAYLIST ROUTE////
+// app.get('/generate-playlist', (req, res) => {
+//   Songdata.find({}, (error, makePlaylist) => {
+//     res.render('playlistpage.ejs', {
+//       songsPlaylistPage: makePlaylist,
+//       currentUser: true
+//     })
+//   })
+// })
+
 app.get('/generate-playlist', (req, res) => {
   Songdata.find({}, (error, makePlaylist) => {
-    res.render('playlistpage.ejs', {
+    Songnumber.find({}, (error, makeSongs) => {
+      res.render('playlistpage.ejs', {
       songsPlaylistPage: makePlaylist,
+      numberOfSongs: makeSongs,
       currentUser: true
     })
   })
+})
 })
 
 ////SHUFFLE ROUTE////
@@ -187,7 +225,7 @@ app.get('/songs', (req, res) => {
 //   if (err) console.log(err.message);
 //   console.log("added provided songs data");
 // })
-// Songdata.collection.drop()
+// Songnumber.collection.drop()
 // Songdata.countDocuments({}, (err, data) => {
 //   if (err) console.log(err.message)
 //   console.log(`There are ${data} songs in this database`)

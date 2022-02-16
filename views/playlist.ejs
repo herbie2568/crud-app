@@ -11,15 +11,17 @@
       <div class = 'playlist'>
         <h1>Generate Playlist</h1>
 
-        <form action = '/generate-playlist'>
-        <input class = 'number-songs' name = 'songNumber' type='text' placeholder = 'number of songs..' id = 'songNumber' value = ''/>
-        <input type = 'submit' value = 'make playlist'>
+        <form class = 'make-playlist' action = '/generate-playlist' method = 'POST'>
+      
+        <input class = 'number-songs' name = 'numberOfSongs' type='number' placeholder = 'number of songs..' id = 'songNumber' />
+
+        <input class = 'playlist-btn2' type = 'submit' value = 'make playlist'>
       </form>
 
       <% songsPlaylist = songsPlaylist.sort(() => Math.random()-0.5) %>
 
-      <div class="container">
-        <% for (let i = 0; i < songsPlaylist.length; i++) { %>
+      <div class="playlist-container">
+        <% for (let i = 0; i < 10; i++) { %>
           <li>
 
             <% if (!songsPlaylist[i].img) {
@@ -47,5 +49,6 @@
 
       </div>
       </div>
+    </div>
   </body>
 </html>
