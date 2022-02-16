@@ -9,7 +9,7 @@
   <body>
     <%- include('./partials/header.ejs') %>
     <div class = 'edit-song'>
-    <h1>Edit Song Details</h1>
+    <h1 class = 'orangeh1'>Edit Song Details</h1>
     <form class = 'newsong-form' action = "/songs/<%= songsEdit.id%>?_method=PUT" method = 'POST'>
       <input class = 'newsong' type='text' name = 'title' placeholder = 'song title...' value = '<%=songsEdit.title%>'/><br/>
       <input class = 'newsong' type='text' name = 'artist' placeholder = 'artist...' value = '<%=songsEdit.artist%>'/><br/>

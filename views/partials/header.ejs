@@ -8,26 +8,22 @@
 <h1 class = 'chordstrike'>ChordStrike</h1>
 </div>
 
-<ul class="right">
+<div class = 'logout-search'>
 
-  <% if (currentUser) { %>
-  <li>Welcome <%= currentUser.username %></li>
-  <li>
-    <form action="/sessions?_method=DELETE" method="POST">
-      <input type="submit" value="Log Out" class="btn-small red" />
-    </form>
-  </li>
-  <% } else { %>
-  <li><a href="/users/new">Sign Up</a></li>
-  <li><a href="/sessions/new">Log In</a></li>
-  <% } %>
-</ul>
+<div class = 'header-right'>
+  <!-- <div>Welcome <%= currentUser.username %></div> -->
+  <form class = 'logout-btnform' action="/sessions?_method=DELETE" method="POST">
+    <input class = 'logout-btn' type="submit" value="Log Out" class="btn-small red" />
+  </form>
+  </div>
 
-<div class = 'searchbar-div'>
+
+<!-- <div class = 'searchbar-div'>
 <input class = 'searchbar' type = 'text' name = 'search' placeholder = 'search...' id = 'search-box'/>
 
 <img class = 'search-pic' src = 'https://www.freeiconspng.com/thumbs/magnifying-glass-icon/magnifying-glass-icon-13.png'></img>
   </div>
+</div> -->
 </header>
 
 <nav class = 'header-btns'>

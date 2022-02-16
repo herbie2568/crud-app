@@ -13,7 +13,7 @@
   <%- include('./partials/header.ejs') %>
 
 <div class = 'index-container'>
-<h1 class = 'my-library'>My Library</h1>
+<h1 class = 'my-library' class = 'orangeh1'>My Library</h1>
 <div class = 'song-number'><%=songsIndex.length%> songs</div>
     <div class="container">
 
@@ -30,6 +30,9 @@
 
 
         <div class = 'ed-btns'>
+          <!-- <form class = 'like-btn-form' action='' >
+          <button class = 'like-btn'>Like</button>
+        </form> -->
           <form class = 'edit-btn-form' action='/songs/<%=songsIndex[i].id; %>/edit' >
           <input class = 'edit-btn' type='submit' value = 'Edit' />
         </form>
@@ -45,16 +48,27 @@
 
     </div>
   </div>
-    <footer>
-      <ul>
-          <li><a href = '/songs'>Home</a></li>
-          <li><a href = '/about'>About</a></li>
-          <li><a href = '/songs/new'>Add Song</a></li>
-          <li><a href = '/playlist'>Generate Playlist</a></li>
+  <footer>
 
-      </ul>
+    <div class = 'logo-csfooter'>
+
+    <img class = 'logofooter' src = 'https://i.imgur.com/HqB6pBl.png'></img>
 
 
-    </footer>
+  </div>
+
+
+    <ul class = 'footer-ul'>
+      <li class = 'footer-li'>About</li>
+      <li class = 'footer-li'>Legal Notices</li>
+      <li class = 'footer-li'>Privacy Policy</li>
+      <li class = 'footer-li'>Contact Us</li>
+    </ul>
+
+    <div class = 'copyright'>
+      © 2022 ChordStrike
+    </div>
+
+  </footer>
   </body>
 </html>

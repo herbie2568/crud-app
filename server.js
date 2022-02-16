@@ -219,13 +219,13 @@ app.get('/songs', (req, res) => {
 })
 
 
-
+// Songnumber.collection.drop()
 //
 // Songdata.create(songsSeed, (err, data) => {
 //   if (err) console.log(err.message);
 //   console.log("added provided songs data");
 // })
-// Songnumber.collection.drop()
+// Songdata.collection.drop()
 // Songdata.countDocuments({}, (err, data) => {
 //   if (err) console.log(err.message)
 //   console.log(`There are ${data} songs in this database`)

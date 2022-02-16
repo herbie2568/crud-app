@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 
 const songnumberSchema = new Schema ({
-    howManySongs: String
+    numberOfSongs: String
 
 })
 

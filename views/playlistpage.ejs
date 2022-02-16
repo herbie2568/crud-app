@@ -9,18 +9,20 @@
     <%- include('./partials/header.ejs') %>
 
       <div class = 'playlist'>
-        <h1>Generate Playlist</h1>
+        <h1 class = 'orangeh1'>Generate Playlist</h1>
 
-        <form class = 'make-playlist' action = '/generate-playlist'>
+        <form class = 'make-playlist' action = '/generate-playlist' method = 'POST'>
         <div>
-        <input class = 'number-songs' name = 'songNumber' type='text' placeholder = 'number of songs..' id = 'songNumber' />
+        <input class = 'number-songs' name = 'numberOfSongs' type='text' placeholder = 'number of songs..' id = 'songNumber' />
       </div>
+
         <input class = 'playlist-btn2' type = 'submit' value = 'make playlist'>
       </form>
 
-      <div> <%=numberOfSongs%> </div>
-
-
+<!--
+        <% for (let j = 0; j < numberOfSongs.length; j++) { %>
+          <div><%=numberOfSongs[j].numberOfSongs%></div>
+        <% } %> -->
 
 
       <% songsPlaylistPage = songsPlaylistPage.sort(() => Math.random()-0.5) %>
