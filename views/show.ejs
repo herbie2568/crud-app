@@ -17,10 +17,11 @@
       </div>
     <h1 class = 'chordstrike'>ChordStrike</h1>
     </div>
-    <div class = 'searchbar-div'>
+    <div class = 'searchbar-divshow'>
 
-    <input class = 'searchbar' type = 'text' name = 'search' placeholder = 'search...' value = ''>
-    <img class = 'search-pic' src = 'https://www.freeiconspng.com/thumbs/magnifying-glass-icon/magnifying-glass-icon-13.png'></img>
+    <input class = 'searchbar' type = 'text' placeholder = 'search...' id = 'search-box' oninput = 'Search((this.value).toLowerCase())'/>
+
+    <img class = 'search-picshow' src = 'https://www.freeiconspng.com/thumbs/magnifying-glass-icon/magnifying-glass-icon-13.png'></img>
       </div>
     </header>
 
@@ -46,6 +47,15 @@
 
     <div class = 'mv-div'>
     <iframe class = 'mv' width="560" height="315" src='<%=songsShow.musicvideo%>' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- 
+      <% for (let i = 0; i < songsNext.length; i++) {
+        let next = songsNext[i].id %>
+
+<a href="/songs/<%=next%>">next</a>
+  <%  } %> -->
+
+
+
   </div>
   </div>
 

@@ -27,7 +27,9 @@ header {
   display: flex;
   flex-direction: row;
   width: 100vw;
+  justify-content: space-between;
 }
+
 
 .stickybar {
   position: fixed;
@@ -100,6 +102,12 @@ header {
   position: relative;
 }
 
+.searchbar-divshow {
+  margin-right: 10vw;
+  margin-top: 5vh;
+  position: relative;
+}
+
 .searchbar {
   padding-top:  10px;
   padding-bottom: 10px;
@@ -107,6 +115,7 @@ header {
   border: 2px solid grey;
   border-radius: 5px;
   font-size: 20px;
+  font-family: 'Ubuntu'
 
 }
 
@@ -115,6 +124,13 @@ header {
   position: absolute;
   right: 3%;
   top: 24%;
+}
+
+.search-picshow {
+  height: 25px;
+  position: absolute;
+  right: 3%;
+  top: 10%;
 }
 
 .search-pic:hover {
@@ -244,6 +260,7 @@ header {
   justify-content: center;
   gap: 10%;
   margin-bottom: 15%;
+  margin-top: 1vh;
 }
 
 .edit-btn {
@@ -264,35 +281,23 @@ header {
 
 }
 
-.heart-shape {
-  position: relative;
-  width: 15px;
-  height: 15px;
-  background-color: red;
-  transform: rotate(45deg);
-  align-self: center;
+#button {
+  background: white;
+  color: black;
+  cursor: pointer;
+  padding: 2px 4px;
+  font-family: 'Ubuntu';
+  border-radius: 10px;
+  transition-duration: 0.1s;
+  border: 1px solid grey;
+
 }
 
-.heart-shape:before,
-.heart-shape:after{
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  content: '';
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  background-color: red;
+#button.down {
+  background: #ff5959;
+
 }
-.heart-shape:before{
-  bottom: 0px;
-  left: -7px;
-}
-.heart-shape:after{
-  top: -7px;
-  right: 0px;
-}
+
 
 .edit-btn-form .delete-btn-form {
   width: 100%;
@@ -311,10 +316,6 @@ header {
   transform: scale(1.1);
   cursor: pointer;
 }
-
-/* .like-btn:active {
-  background-color: orange;
-} */
 
 .index-container, .song-show, .new-song, .edit-song, .playlist {
   margin-top: 30vh;

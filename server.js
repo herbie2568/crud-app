@@ -187,14 +187,26 @@ app.post('/songs/', (req, res) => {
 })
 
 ////SHOW ROUTE/////
+// app.get('/songs/:id', (req, res) => {
+//   Songdata.findById(req.params.id, (err, foundSong) => {
+//     res.render('show.ejs', {
+//       currentUser: true,
+//       songsShow: foundSong
+//     })
+//   })
+// })
+
 app.get('/songs/:id', (req, res) => {
-  Songdata.findById(req.params.id, (err, foundSong) => {
+  Songdata.find({}, (err, showSong) => {
+    Songdata.findById(req.params.id, (err, foundSong) => {
     res.render('show.ejs', {
       currentUser: true,
-      songsShow: foundSong
+      songsShow: foundSong,
+      songsNext: showSong
     })
   })
 })
+  })
 
 ////EDIT ROUTE////
 app.get('/songs/:id/edit', (req, res)=>{
