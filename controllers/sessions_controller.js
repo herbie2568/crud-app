@@ -5,9 +5,11 @@ const User = require('../models/users.js')
 const UserSeed = require('../models/userseed.js')
 
 sessions.get('/new', (req, res) => {
-  res.render('sessions-new.ejs', {
-    currentUser: req.session.currentUser
+  User.find({}, (error, newUser) => {
+    res.render('sessions-new.ejs', {
+      currentUser: true,
   })
+})
 })
 
 sessions.post('/', (req, res) => {
@@ -22,7 +24,7 @@ sessions.post('/', (req, res) => {
     } else {
       if (bcrypt.compareSync(req.body.password, foundUser.password)) {
         req.session.currentUser = foundUser
-        res.redirect('/')
+        res.redirect('/songs')
       } else {
         res.send('<a href="/"> password does not match </a>')
       }

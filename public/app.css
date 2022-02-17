@@ -26,8 +26,7 @@ li {
 header {
   display: flex;
   flex-direction: row;
-  /* margin-bottom: 3%; */
-  /* position: fixed; */
+  width: 100vw;
 }
 
 .stickybar {
@@ -38,6 +37,7 @@ header {
   background-color: black;
   z-index: 999;
   opacity: 0.9;
+  width: 100vw;
 
 }
 .logoanchor-div {
@@ -66,14 +66,14 @@ header {
   display: flex;
   flex-direction: column;
   gap: 15%;
-  width: 40%
+  width: 60%;
 }
 .header-right {
   display:flex;
   flex-direction: row;
   align-self: flex-end;
-  margin-right: 10px;
-  margin-top: 10px;
+  margin-right: 15px;
+  margin-top: 15px;
 }
 
 .orangeh1 {
@@ -176,7 +176,29 @@ header {
   transition-duration: 0.4s;
   padding-left: 50px;
 }
+.playlistbtn-div {
+  position: relative;
+}
 
+.playlist-icon {
+  position: absolute;
+  width: 6.5%;
+  top: 14px;
+  left: 30px;
+  z-index: 999;
+
+}
+
+.playlist-button {
+  font-size: 16px;
+  font-family: 'Ubuntu';
+  padding: 10px 30px;
+  /* color: white; */
+  border-radius: 10px;
+  border: 2px solid grey;
+  transition-duration: 0.4s;
+  padding-left: 50px;
+}
 .container {
   list-style-type: none;
   display: flex;
@@ -315,7 +337,7 @@ header {
    padding: 5px 15px;
    font-size: 20px;
    border-radius: 10px;
-   margin-top: 1%;
+   margin-top: 1vh;
    font-family: 'Ubuntu'
 }
 
@@ -438,6 +460,9 @@ header {
 .chordstrikehome {
   font-style: italic;
   align-self: center;
+  font-weight: 600;
+  font-family: 'Ubuntu'
+
 }
 
 .signup {
@@ -454,21 +479,67 @@ header {
   font-size: max(5vw, 60px);
   color: black;
   font-weight: 600;
-  margin-bottom: 2%;
+  margin-bottom: 5vh;
+  font-family: 'Ubuntu';
+  animation-name: slideout;
+  animation-duration: 2s;
 }
+
+@keyframes slideout {
+  from{
+    margin-right: 100vw;
+    width: 300%;
+  }
+  to {
+    margin-right: 0%;
+    width: 100%;
+  }
+}
+
 
 .slogan-small1 {
   margin-left: 25vw;
   font-size: min(2vw, 30px);
   color: white;
   font-weight: 400;
+  margin-bottom: 1%;
+  font-family: 'Ubuntu';
+  animation-name: slideleft;
+  animation-duration: 2s;
 }
 
+@keyframes slideleft {
+  from{
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 25vw;
+    width: 100%
+  }
+}
+
+
 .slogan-small2 {
-  margin-left: 55vw;
+  margin-left: 50vw;
   font-size: min(2vw, 30px);
   color: white;
   font-weight: 400;
+  font-family: 'Ubuntu';
+  animation-duration: 2s;
+  animation-name: slidein;
+  margin-bottom: 5vh;
+
+}
+@keyframes slidein {
+  from{
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 50vw;
+    width: 100%
+  }
 }
 
 
@@ -522,6 +593,21 @@ header {
   margin-bottom: 7vh;
   text-align: center;
   margin-top: 30vh;
+  font-family: 'Ubuntu';
+  animation-name: slideright;
+  animation-duration: 2s;
+
+}
+@keyframes slideright {
+  from {
+      margin-left: 100%;
+      width: 300%;
+    }
+
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
 }
 
 .elite2-container {
@@ -531,6 +617,7 @@ header {
   margin-left: 10%;
   margin-right: 10%;
 
+
 }
 
 .elite2 {
@@ -539,6 +626,12 @@ header {
   text-align: center;
   font-weight: 500;
   margin-bottom: 5%;
+}
+
+.icontext {
+  font-family: 'Ubuntu';
+  font-size: 16px;
+
 }
 
 .upload-img {
@@ -592,6 +685,7 @@ footer {
   padding-top: 0.5vh;
   padding-bottom: 0.5vh;
   height: 30px;
+  font-family: 'Ubuntu'
 
 }
 
@@ -643,7 +737,7 @@ footer {
 }
 
 .logoanchor-divnew {
-  width: 7%;
+  width: min(7%, 75px);
     align-self: center;
 }
 
@@ -657,18 +751,25 @@ footer {
   font-size: 2em;
   font-style: italic;
   align-self: center;
+  font-family: 'Ubuntu';
+
 }
 
 .logo-csnew {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 5%;
+  margin-top: 5vh;
   /* margin-right: 5%; */
 }
 
 .newaccount {
-  margin-bottom: 5%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  font-family: 'Ubuntu';
+  font-weight: 600;
+  /* color: #ff914d; */
+
 }
 
 .signup-form {
@@ -676,11 +777,11 @@ footer {
 }
 
 .passwordnew {
-  margin-bottom: 2%;
+  margin-bottom: 2vh;
   padding: 5px 15px;
   font-size: 20px;
   border-radius: 10px;
-  margin-top: 1%;
+  margin-top: 1vh;
   font-family: 'Ubuntu'
 }
 

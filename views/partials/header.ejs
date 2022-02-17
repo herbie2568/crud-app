@@ -12,7 +12,7 @@
 
 <div class = 'header-right'>
   <!-- <div>Welcome <%= currentUser.username %></div> -->
-  <form class = 'logout-btnform' action="/sessions?_method=DELETE" method="POST">
+  <form class = 'logout-btnform' action="/" >
     <input class = 'logout-btn' type="submit" value="Log Out" class="btn-small red" />
   </form>
   </div>
@@ -39,9 +39,11 @@
 </form>
 </div>
 
+<div class = 'playlistbtn-div'>
 <form class = 'playlist-btn' action='/songs/playlist' >
-<!-- <img class = 'playlist-icon' src="https://i.imgur.com/qCUROAc.png"> -->
-<input class = 'btn' type='submit' value = 'Generate Playlist' />
+<img class = 'playlist-icon' src="https://i.imgur.com/PlGSAO2.png">
+<input class = 'playlist-button' type='submit' value = 'Generate Playlist' />
 </form>
+</div>
 </nav>
 </div>

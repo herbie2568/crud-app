@@ -10,10 +10,14 @@ const Songdata = require('./models/songs.js')
 const songsSeed = require('./models/seed.js')
 const User = require('./models/users.js')
 const Songnumber = require('./models/numberofsongs.js')
+const MongoDBStore = require('connect-mongodb-session')(session)
+const store = new MongoDBStore ({
+  uri: 'mongodb://localhost:27017/connect_mongodb_session_test',
+  collection: 'mySessions'
+});
 const userController = require('./controllers/users_controller.js')
 const sessionsController = require('./controllers/sessions_controller.js')
 app.use('/sessions', sessionsController)
-
 
 
 const db = mongoose.connection;
@@ -23,6 +27,9 @@ const MONGODB_URI = process.env.MONGODB_URI;
 mongoose.connect(MONGODB_URI)
 
 
+store.on('error', function(error) {
+  console.log(error);
+})
 
 
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
@@ -43,6 +50,17 @@ app.use(
     saveUninitialized: false
   })
 )
+
+app.use(require('express-session')({
+  secret: 'This is a secret',
+  cookie: {
+    maxAge: 1000 * 60 * 60 * 24 * 7
+  },
+  store: store,
+  resave: true,
+  saveUninitialized: true
+
+}))
 
 ///HOMEPAGE ROUTE///
 app.get('/', (req, res) => {
