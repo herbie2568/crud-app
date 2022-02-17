@@ -32,7 +32,7 @@ sessions.post('/', (req, res) => {
   })
 })
 
-sessions.delete('/', (req, res) => {
+sessions.post('/', (req, res) => {
   req.session.destroy(() => {
     res.redirect('/')
   })

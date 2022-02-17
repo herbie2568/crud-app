@@ -19,9 +19,8 @@
 
 
 <div class = 'searchbar-div'>
-  <!-- <form action = '/songs/search' method = "POST"> -->
+
 <input class = 'searchbar' type = 'text' placeholder = 'search...' id = 'search-box' oninput = 'Search((this.value).toLowerCase())'/>
-  <!-- </form> -->
 
 <img class = 'search-pic' src = 'https://www.freeiconspng.com/thumbs/magnifying-glass-icon/magnifying-glass-icon-13.png'></img>
   </div>
@@ -29,7 +28,7 @@
 
   <script>
       function Search(item){
-              var collection = document.getElementsByClassName("songItem");
+              let collection = document.getElementsByClassName("songItem");
               for (i = 0;i < collection.length; i++){
                   if (((collection[i].innerHTML).toLowerCase()).indexOf(item) > -1) {
                       collection[i].style.display = "block";

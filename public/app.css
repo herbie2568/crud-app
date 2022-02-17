@@ -65,7 +65,7 @@ header {
 .logout-search {
   display: flex;
   flex-direction: column;
-  gap: 15%;
+  gap: 10%;
   width: 60%;
 }
 .header-right {
@@ -93,8 +93,8 @@ header {
   color: #ff914d;
 }
 .searchbar-div {
-  align-self: flex-start;
-  /* margin-right: 10%; */
+  align-self: flex-end;
+  margin-right: 10vw;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -140,17 +140,17 @@ header {
   border: 2px solid grey;
   transition-duration: 0.4s;
 }
-.shuffle-btn {
+.shuffle-btn, .playlist-btn {
   transition-duration: 0.4s;
 }
-.btn:hover, .shuffle-button:hover {
+.btn:hover, .shuffle-button:hover, .playlist-button:hover {
   background-color: #ff914d;
   cursor: pointer;
   transform: scale(1.1);
   border: 2px solid grey;
 }
 
-.shuffle-btn:hover {
+.shuffle-btn:hover, .playlist-btn:hover {
   transform: scale(1.1)
 }
 .shufflebtn-div {
@@ -160,8 +160,8 @@ header {
 .shuffle-icon {
   position: absolute;
   width: 13%;
-  top: 12px;
-  left: 25px;
+  top: 13px;
+  left: 26px;
   z-index: 999;
 
 }
@@ -183,7 +183,7 @@ header {
 .playlist-icon {
   position: absolute;
   width: 6.5%;
-  top: 14px;
+  top: 15px;
   left: 30px;
   z-index: 999;
 
@@ -262,6 +262,36 @@ header {
   transition-duration: 0.4s;
   background: #ff5959;
 
+}
+
+.heart-shape {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  transform: rotate(45deg);
+  align-self: center;
+}
+
+.heart-shape:before,
+.heart-shape:after{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  content: '';
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-color: red;
+}
+.heart-shape:before{
+  bottom: 0px;
+  left: -7px;
+}
+.heart-shape:after{
+  top: -7px;
+  right: 0px;
 }
 
 .edit-btn-form .delete-btn-form {
@@ -500,6 +530,8 @@ header {
 .slogan-small1 {
   margin-left: 25vw;
   font-size: min(2vw, 30px);
+  font-size: max(2vw, 16px);
+
   color: white;
   font-weight: 400;
   margin-bottom: 1%;
@@ -523,6 +555,8 @@ header {
 .slogan-small2 {
   margin-left: 50vw;
   font-size: min(2vw, 30px);
+  font-size: max(2vw, 16px);
+
   color: white;
   font-weight: 400;
   font-family: 'Ubuntu';
@@ -682,8 +716,8 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 0.5vh;
-  padding-bottom: 0.5vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
   height: 30px;
   font-family: 'Ubuntu'
 
@@ -693,8 +727,8 @@ footer {
   display: flex;
   flex-direction: row;
   margin-right: 10%;
-  width: 80%;
-  gap: 5%;
+  width: 80vw;
+  gap: 5vw;
   align-self: center;
 
 }
@@ -713,7 +747,7 @@ footer {
   color: white;
 }
 .logo-csfooter {
-  width: min(3%, 30px);
+  width: min(4vw, 35px);
   align-self: center;
   margin-left: 1%;
 }

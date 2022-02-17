@@ -28,11 +28,25 @@
           <div class = 'song-info'> <%=songsIndex[i].title%> <br/> <span class = 'artist'><%=songsIndex[i].artist%><span>
           </div>
 
+          <!-- <script type="text/javascript">
+            const button = document.querySelector('.heart-like-button')
+
+            button.addEventListener('click', () => {
+              if (button.classList.contains('liked')) {
+                button.classList.remove('liked')
+              } else {
+                button.classList.add('liked')
+              }
+            })
+          </script> -->
 
         <div class = 'ed-btns'>
           <!-- <form class = 'like-btn-form' action='' >
-          <button class = 'like-btn'>Like</button>
+          <button class = 'like-btn button'>Like</button>
         </form> -->
+        
+          <div class="heart-shape"></div>
+
           <form class = 'edit-btn-form' action='/songs/<%=songsIndex[i].id; %>/edit' >
           <input class = 'edit-btn' type='submit' value = 'Edit' />
         </form>
