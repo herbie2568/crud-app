@@ -11,19 +11,37 @@
 <div class = 'logout-search'>
 
 <div class = 'header-right'>
-  <!-- <div>Welcome <%= currentUser.username %></div> -->
+
   <form class = 'logout-btnform' action="/" >
     <input class = 'logout-btn' type="submit" value="Log Out" class="btn-small red" />
   </form>
   </div>
 
 
-<!-- <div class = 'searchbar-div'>
-<input class = 'searchbar' type = 'text' name = 'search' placeholder = 'search...' id = 'search-box'/>
+<div class = 'searchbar-div'>
+  <!-- <form action = '/songs/search' method = "POST"> -->
+<input class = 'searchbar' type = 'text' placeholder = 'search...' id = 'search-box' oninput = 'Search((this.value).toLowerCase())'/>
+  <!-- </form> -->
 
 <img class = 'search-pic' src = 'https://www.freeiconspng.com/thumbs/magnifying-glass-icon/magnifying-glass-icon-13.png'></img>
   </div>
-</div> -->
+
+
+  <script>
+      function Search(item){
+              var collection = document.getElementsByClassName("songItem");
+              for (i = 0;i < collection.length; i++){
+                  if (((collection[i].innerHTML).toLowerCase()).indexOf(item) > -1) {
+                      collection[i].style.display = "block";
+                      } else {
+                          collection[i].style.display = "none";
+                          }
+              }
+      }
+  </script>
+
+
+</div>
 </header>
 
 <nav class = 'header-btns'>
