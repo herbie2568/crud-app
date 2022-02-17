@@ -47,7 +47,7 @@ header {
 }
 
 .logo {
-  width: 100%;
+  width: min(100%, 110px);
   transition-duration: 0.3s;
   align-self: center;
 }
@@ -198,7 +198,7 @@ header {
 }
 
 .indexphoto {
-  width: 70%;
+  width: min(70%, 250px);
   border-radius: 5px;
   transition-duration: 0.6s;
   margin-bottom: 3%;
@@ -265,7 +265,7 @@ header {
 } */
 
 .index-container, .song-show, .new-song, .edit-song, .playlist {
-  margin-top: 25%;
+  margin-top: 30vh;
   color: white;
 }
 
@@ -419,22 +419,25 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0
+  right: 0;
 
 }
 
 
 .logohome {
   width: 100%;
+
 }
 
 .logoanchor-divhome {
   width: 15%;
+  align-self: center;
+
 }
 
 .chordstrikehome {
   font-style: italic;
-
+  align-self: center;
 }
 
 .signup {
@@ -446,24 +449,24 @@ header {
 }
 
 .slogan-home {
-  margin-top: 38%;
+  margin-top: 35vh;
   text-align: center;
-  font-size: 4em;
+  font-size: max(5vw, 60px);
   color: black;
   font-weight: 600;
   margin-bottom: 2%;
 }
 
 .slogan-small1 {
-  margin-left: 20%;
-  font-size: 1.3em;
+  margin-left: 25vw;
+  font-size: min(2vw, 30px);
   color: white;
   font-weight: 400;
 }
 
 .slogan-small2 {
-  margin-left: 50%;
-  font-size: 1.3em;
+  margin-left: 55vw;
+  font-size: min(2vw, 30px);
   color: white;
   font-weight: 400;
 }
@@ -496,7 +499,7 @@ header {
 }
 
 .pageone {
-  height: 60vh;
+  height: 65vh;
 }
 
 .pagetwo {
@@ -516,9 +519,9 @@ header {
   font-size: 3.2em;
   color: white;
   font-weight: 600;
-  margin-bottom: 7%;
+  margin-bottom: 7vh;
   text-align: center;
-  margin-top: 35%;
+  margin-top: 30vh;
 }
 
 .elite2-container {
@@ -539,7 +542,7 @@ header {
 }
 
 .upload-img {
-  width: 50%;
+  width: min(50%, 100px);
   margin-bottom: 10%;
 }
 
@@ -575,10 +578,21 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 0.5%;
-  padding-bottom: 0.5%;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
   height: 50px;
   margin-top: 10%;
+}
+
+.footer {
+  background-color: #ff914d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  height: 30px;
+
 }
 
 .footer-ul {
@@ -605,12 +619,12 @@ footer {
   color: white;
 }
 .logo-csfooter {
-  width: 6%;
+  width: min(3%, 30px);
   align-self: center;
-  margin-left: 2%;
+  margin-left: 1%;
 }
 .logoanchor-divfooter {
-  width: 10%;
+  width: min(10%, 30px);
   align-self: center;
   margin-left: 2%;
   margin-right: 1%;

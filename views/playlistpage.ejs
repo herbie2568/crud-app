@@ -19,8 +19,9 @@
         <input class = 'playlist-btn2' type = 'submit' value = 'make playlist'>
       </form>
 
-<!--
-        <% for (let j = 0; j < numberOfSongs.length; j++) { %>
+
+        <!-- <% for (let j = 0; j < numberOfSongs.length; j++) {
+          console.log(numberOfSongs[j].numberOfSongs)%>
           <div><%=numberOfSongs[j].numberOfSongs%></div>
         <% } %> -->
 
@@ -29,10 +30,15 @@
 
 
       <div class="container">
-        <% for (let i = 0; i < 10; i++) { %>
+        <%
+
+
+        for (let i = 0; i < numberOfSongs[0].numberOfSongs; i++) {
+          numberOfSongs.sort()
+          numberOfSongs.reverse() %>
           <li>
 
-            <% if (!songsPlaylistPage[i].img) {
+        <%    if (!songsPlaylistPage[i].img) {
               songsPlaylistPage[i].img = 'https://i.imgur.com/03uVfdA.png'
             } %>
 

@@ -6,7 +6,7 @@ const UserSeed = require('../models/userseed.js')
 
 sessions.get('/new', (req, res) => {
   res.render('sessions-new.ejs', {
-    currentUser: true
+    currentUser: req.session.currentUser
   })
 })
 
