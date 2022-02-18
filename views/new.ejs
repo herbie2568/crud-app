@@ -17,102 +17,15 @@
       <input class = 'newsong' type= 'url' name = 'img' placeholder = 'album image URL...'/><br/>
       <input class = 'newsong' type= 'url' name = 'musicvideo' placeholder = 'youtube embed URL...'/><br/>
 
-    <div class = genremenu>
-      <div>
-        Select all genres that apply: </div>
-      <div class = 'checkboxes'>
-      <div class = 'column1'>
-      <div class = 'genre'>
-      <input class = 'checkbox' type = 'checkbox' id = 'alternative' name = 'genre' value = ' alternative'>
-      <label for = 'alternative'>alternative</label>
-    </div>
-      <div class = 'genre'>
-      <input class = 'checkbox' type = 'checkbox' id = 'blues' name = 'genre' value = ' blues'>
-      <label for = 'blues '>blues</label>
-      </div>
-      <div class = 'genre'>
-      <input class = 'checkbox' type = 'checkbox' id = 'classical' name = 'genre' value = ' classical'>
-      <label for = 'classical'>classical</label>
-      </div>
-      <div class = 'genre'>
-      <input class = 'checkbox' type = 'checkbox' id = 'country' name = 'genre' value = ' country'>
-      <label for = 'country'>country</label>
-      </div>
-      <div class = 'genre'>
-      <input class = 'checkbox' type = 'checkbox' id = 'dance' name = 'genre' value = ' dance'>
-      <label for = 'dance'>dance</label>
-    </div>
-    </div>
-    <div class = 'column2'>
-      <div class = 'genre'>
-      <input class = 'checkbox' type = 'checkbox' id = 'disco' name = 'genre' value = ' disco'>
-      <label for = 'disco'>disco</label>
-      </div>
-      <div class = 'genre'>
-      <input class = 'checkbox' type = 'checkbox' id = 'electronic' name = 'genre' value = ' electronic'>
-      <label for = 'electronic'>electronic</label>
-      </div>
-      <div class = 'genre'>
-      <input class = 'checkbox' type = 'checkbox' id = 'folk' name = 'genre' value = '  folk'>
-      <label for = 'folk'>folk</label>
-      </div>
-      <div class = 'genre'>
-      <input class = 'checkbox' type = 'checkbox' id = 'hip-hop' name = 'genre' value = ' hip-hop'>
-      <label for = 'hip-hop'>hip-hop</label>
-      </div>
-      <div class = 'genre'>
-      <input class = 'checkbox' type = 'checkbox' id = 'indie' name = 'genre' value = ' indie'>
-      <label for = 'indie'>indie</label>
-      </div>
-    </div>
-    <div class = 'column3'>
-      <div class = 'genre'>
-      <input class = 'checkbox' type = 'checkbox' id = 'industrial' name = 'genre' value = ' industrial'>
-      <label for = 'industrial'>industrial</label>
-      </div>
-      <div class = 'genre'>
-      <input class = 'checkbox' type = 'checkbox' id = 'jazz' name = 'genre' value = ' jazz'>
-      <label for = 'jazz'>jazz</label>
-      </div>
-      <div class = 'genre'>
-      <input class = 'checkbox' type = 'checkbox' id = 'metal' name = 'genre' value = ' metal'>
-      <label for = 'metal'>metal</label>
-      </div>
-      <div class = 'genre'>
-      <input class = 'checkbox' type = 'checkbox' id = 'pop' name = 'genre' value = ' pop'>
-      <label for = 'pop'>pop</label>
-      </div>
-      <div class = 'genre'>
-      <input class = 'checkbox' type = 'checkbox' id = 'punk' name = 'genre' value = ' punk'>
-      <label for = 'punk'>punk</label>
-      </div>
-    </div>
-    <div class = 'column4'>
-      <div class = 'genre'>
-      <input class = 'checkbox' type = 'checkbox' id = 'R&B/soul' name = 'genre' value = ' R&B/soul'>
-      <label for = 'R&B/soul'>R&B/soul</label>
-      </div>
-      <div class = 'genre'>
-      <input class = 'checkbox' type = 'checkbox' id = 'rap' name = 'genre' value = ' rap'>
-      <label for = 'rap'>rap</label>
-      </div>
-      <div class = 'genre'>
-      <input class = 'checkbox' type = 'checkbox' id = 'reggae' name = 'genre' value = ' reggae'>
-      <label for = 'reggae'>reggae</label>
-      </div>
-      <div class = 'genre'>
-      <input class = 'checkbox' type = 'checkbox' id = 'rock' name = 'genre' value = ' rock'>
-      <label for = 'rock'>rock</label>
-      </div>
-      <div class = 'genre'>
-      <input class = 'checkbox' type = 'checkbox' id = 'world' name = 'genre' value = ' world'>
-      <label for = 'world'>world</label><br/>
-      </div>
-    </div>
-    </div>
-  </div>
+    <%- include('./partials/genre.ejs') %>
+
+  <form action= '/songs'>
+    <div class = 'cancel-btns'>
+    <input class = 'btn' type = 'submit' value = 'Cancel'/>
+  </form>
 
       <input class = 'btn' type = 'submit' value = 'Add to Library'/>
+    </div>
     </form>
   </div>
   </body>

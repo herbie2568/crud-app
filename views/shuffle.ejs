@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <%- include('./partials/head.ejs') %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/button.js"></script>
     <title></title>
   </head>
   <body>
@@ -15,7 +17,7 @@
 
           <% songsShuffle = songsShuffle.sort(() => Math.random()-0.5) %>
         <% for (let i = 0; i < songsShuffle.length; i++) { %>
-          <li>
+          <li class = 'songItem'>
 
             <% if (!songsShuffle[i].img) {
               songsShuffle[i].img = 'https://i.imgur.com/03uVfdA.png'
@@ -25,7 +27,7 @@
             <div class = 'song-info'> <%=songsShuffle[i].title%> <br/> <span class = 'artist'><%=songsShuffle[i].artist%><span>
             </div>
 
-
+<a id = 'button' title = 'button'>♥ Like</a>
           <div class = 'ed-btns'>
             <form class = 'edit-btn-form' action='/songs/<%=songsShuffle[i].id; %>/edit' >
             <input class = 'edit-btn' type='submit' value = 'Edit' />
