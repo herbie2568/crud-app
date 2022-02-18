@@ -117,8 +117,8 @@ header {
 }
 
 .searchbar {
-  padding-top:  10px;
-  padding-bottom: 10px;
+  padding-top:  4%;
+  padding-bottom: 4%;
   padding-left: 5%;
   border: 2px solid grey;
   border-radius: 10px;
@@ -233,6 +233,7 @@ header {
   text-align: center;
   margin-top: 3%;
   margin-left: 9%;
+  flex-grow: 1;
 }
 
 .my-library {
@@ -778,6 +779,19 @@ footer {
   font-size: 0.7em;
   align-self: center;
   margin-right: 5%;
+  transition-duration: 0.3s;
+}
+
+.copyright:hover {
+  transform: scale(1.05);
+  color: black;
+}
+.linkedin {
+  transition-duration: 0.3s;
+}
+.linkedin:hover {
+  color: black;
+
 }
 
 .logoanchor-divnew {
