@@ -1,75 +1,50 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="app.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="button.js"></script>
-    <title>ChordStrike</title>
-  </head>
-  <body>
+<head>
+  <%- include('./partials/head.ejs') %>
+  <title>ChordStrike</title>
+</head>
+<body>
   <%- include('./partials/header.ejs') %>
-
-<div class = 'index-container'>
-<h1 class = 'my-library' class = 'orangeh1'>My Library</h1>
-<div class = 'song-number'><%=songsIndex.length%> songs</div>
+  <div class = 'index-container'>
+    <h1 class = 'my-library' class = 'orangeh1'>My Library</h1>
+    <div class = 'song-number'><%=songsIndex.length%> songs</div>
     <div class="container">
-
       <% for (let i = 0; i < songsIndex.length; i++) {
         %>
         <li class = 'songItem'>
-
           <% if (!songsIndex[i].img) {
             songsIndex[i].img = 'https://i.imgur.com/03uVfdA.png'
           } %>
-
           <a href = '/songs/<%=songsIndex[i].id%>'><img class = 'indexphoto' src = '<%= songsIndex[i].img %>'></img><a>
-          <div class = 'song-info'> <%=songsIndex[i].title%> <br/> <span class = 'artist'><%=songsIndex[i].artist%><span>
-          </div>
-
-
-      <a id = 'button' title = 'button'>♥ Like</a>
-        <div class = 'ed-btns'>
-        <form class = 'edit-btn-form' action='/songs/<%=songsIndex[i].id; %>/edit' >
-        <input class = 'edit-btn' type='submit' value = 'Edit' />
-        </form>
-          <form class = 'delete-btn-form' action="/songs/<%=songsIndex[i].id%>?_method=DELETE" method="POST">
-          <input class = 'delete-btn' type='submit' value = 'Delete' />
-        </form>
+            <div class = 'song-info'> <%=songsIndex[i].title%> <br/> <span class = 'artist'><%=songsIndex[i].artist%><span>
+            </div>
+            <a id = 'button' title = 'button'>♥ Like</a>
+            <div class = 'ed-btns'>
+              <form class = 'edit-btn-form' action='/songs/<%=songsIndex[i].id; %>/edit' >
+                <input class = 'edit-btn' type='submit' value = 'Edit' />
+              </form>
+              <form class = 'delete-btn-form' action="/songs/<%=songsIndex[i].id%>?_method=DELETE" method="POST">
+                <input class = 'delete-btn' type='submit' value = 'Delete' />
+              </form>
+            </div>
+          </li>
+          <% } %>
         </div>
-
-        </li>
-
-    <% } %>
-
-
-    </div>
-  </div>
-  <footer>
-
-    <div class = 'logo-csfooter'>
-
-    <img class = 'logofooter' src = 'https://i.imgur.com/HqB6pBl.png'></img>
-
-
-  </div>
-
-
-    <ul class = 'footer-ul'>
-      <li class = 'footer-li'>About</li>
-      <li class = 'footer-li'>Legal Notices</li>
-      <li class = 'footer-li'>Privacy Policy</li>
-      <li class = 'footer-li'>Contact Us</li>
-    </ul>
-
-    <div class = 'copyright'>
-      © 2022 ChordStrike
-    </div>
-
-  </footer>
-  </body>
-</html>
+      </div>
+      <footer>
+        <div class = 'logo-csfooter'>
+          <img class = 'logofooter' src = 'https://i.imgur.com/HqB6pBl.png'></img>
+        </div>
+        <ul class = 'footer-ul'>
+          <li class = 'footer-li'>About</li>
+          <li class = 'footer-li'>Legal Notices</li>
+          <li class = 'footer-li'>Privacy Policy</li>
+          <li class = 'footer-li'>Contact Us</li>
+        </ul>
+        <div class = 'copyright'>
+          © 2022 ChordStrike
+        </div>
+      </footer>
+    </body>
+    </html>

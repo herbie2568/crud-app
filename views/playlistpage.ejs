@@ -1,62 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <%- include('./partials/head.ejs') %>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<head>
+  <meta charset="utf-8">
+  <%- include('./partials/head.ejs') %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="/button.js"></script>
-    <title></title>
-  </head>
-  <body>
-    <%- include('./partials/header.ejs') %>
-
-      <div class = 'playlist'>
-        <h1 class = 'orangeh1'>Generate Playlist</h1>
-
-        <form class = 'make-playlist' action = '/generate-playlist' method = 'POST'>
-        <div>
+  <title>Generate Playlist</title>
+</head>
+<body>
+  <%- include('./partials/header.ejs') %>
+  <div class = 'playlist'>
+    <h1 class = 'orangeh1'>Generate Playlist</h1>
+    <form class = 'make-playlist' action = '/generate-playlist' method = 'POST'>
+      <div>
         <input class = 'number-songs' name = 'numberOfSongs' type='text' placeholder = 'enter number of songs...' id = 'songNumber' />
       </div>
-
-        <input class = 'playlist-btn2' type = 'submit' value = 'make playlist'>
-      </form>
-
-
-      <!-- <% songsPlaylistPage = songsPlaylistPage.sort(() => Math.random()-0.5) %> -->
-
-      <div class="container">
-        <%
-
-        for (let i = 0; i < numberOfSongs[0].numberOfSongs; i++) {
-          numberOfSongs.sort()
-          numberOfSongs.reverse() %>
-          <li class = 'songItem'>
-
-        <%    if (!songsPlaylistPage[i].img) {
-              songsPlaylistPage[i].img = 'https://i.imgur.com/03uVfdA.png'
-            } %>
-
-
-            <a href = '/songs/<%=songsPlaylistPage[i].id%>'><img class = 'indexphoto' src = '<%= songsPlaylistPage[i].img %>'></img><a>
+      <input class = 'playlist-btn2' type = 'submit' value = 'make playlist'>
+    </form>
+    <% songsPlaylistPage = songsPlaylistPage.sort(() => Math.random()-0.5) %>
+    <div class="container">
+      <%
+      for (let i = 0; i < numberOfSongs[0].numberOfSongs; i++) {
+        numberOfSongs.sort()
+        numberOfSongs.reverse() %>
+        <li class = 'songItem'>
+          <%    if (!songsPlaylistPage[i].img) {
+            songsPlaylistPage[i].img = 'https://i.imgur.com/03uVfdA.png'
+          } %>
+          <a href = '/songs/<%=songsPlaylistPage[i].id%>'><img class = 'indexphoto' src = '<%= songsPlaylistPage[i].img %>'></img><a>
             <div class = 'song-info'> <%=songsPlaylistPage[i].title%> <br/> <span class = 'artist'><%=songsPlaylistPage[i].artist%><span>
             </div>
-
-<a id = 'button' title = 'button'>♥ Like</a>
-          <div class = 'ed-btns'>
-            <form class = 'edit-btn-form' action='/songs/<%=songsPlaylistPage[i].id; %>/edit' >
-            <input class = 'edit-btn' type='submit' value = 'Edit' />
-          </form>
-            <form class = 'delete-btn-form' action="/songs/<%=songsPlaylistPage[i].id%>?_method=DELETE" method="POST">
-            <input class = 'delete-btn' type='submit' value = 'Delete' />
-          </form>
-          </div>
-
+            <a id = 'button' title = 'button'>♥ Like</a>
+            <div class = 'ed-btns'>
+              <form class = 'edit-btn-form' action='/songs/<%=songsPlaylistPage[i].id; %>/edit' >
+                <input class = 'edit-btn' type='submit' value = 'Edit' />
+              </form>
+              <form class = 'delete-btn-form' action="/songs/<%=songsPlaylistPage[i].id%>?_method=DELETE" method="POST">
+                <input class = 'delete-btn' type='submit' value = 'Delete' />
+              </form>
+            </div>
           </li>
-
-      <% } %>
-
-
+          <% } %>
+        </div>
       </div>
-      </div>
-  </body>
-</html>
+    </body>
+    </html>

@@ -1,32 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <%- include('./partials/head.ejs') %>
-    <title>Add New Song</title>
-  </head>
-
-  <body>
-    <%- include('./partials/header.ejs') %>
-    <div class = 'new-song'>
+<head>
+  <meta charset="utf-8">
+  <%- include('./partials/head.ejs') %>
+  <title>Add New Song</title>
+</head>
+<body>
+  <%- include('./partials/header.ejs') %>
+  <div class = 'new-song'>
     <h1 class = 'orangeh1'>Add New Song</h1>
-
     <form class = 'newsong-form' action = '/songs' method = 'POST'>
       <input class = 'newsong' type='text' name = 'title' placeholder = 'song title...'/><br/>
       <input class = 'newsong' type='text' name = 'artist' placeholder = 'artist...'/><br/>
       <input class = 'newsong' type= 'url' name = 'img' placeholder = 'album image URL...'/><br/>
       <input class = 'newsong' type= 'url' name = 'musicvideo' placeholder = 'youtube embed URL...'/><br/>
-
-    <%- include('./partials/genre.ejs') %>
-
-  <form action= '/songs'>
-    <div class = 'cancel-btns'>
-    <input class = 'btn' type = 'submit' value = 'Cancel'/>
-  </form>
-
-      <input class = 'btn' type = 'submit' value = 'Add to Library'/>
-    </div>
+      <%- include('./partials/genre.ejs') %>
+      <form action= '/songs'>
+        <div class = 'cancel-btns'>
+          <input class = 'btn' type = 'submit' value = 'Cancel'/>
+        </form>
+        <input class = 'btn' type = 'submit' value = 'Add to Library'/>
+      </div>
     </form>
   </div>
-  </body>
+</body>
 </html>

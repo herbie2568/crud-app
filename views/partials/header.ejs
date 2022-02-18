@@ -1,66 +1,50 @@
 <div class = 'stickybar'>
-<header>
-
-<div class = 'logo-cs'>
-  <div class = 'logoanchor-div'>
-<a class = 'logoanchor' href = '/songs'><img class = 'logo' src = 'https://i.imgur.com/iX8bkQR.png'></img></a>
-  </div>
-<h1 class = 'chordstrike'>ChordStrike</h1>
-</div>
-
-<div class = 'logout-search'>
-
-<div class = 'header-right'>
-
-  <form class = 'logout-btnform' action="/" >
-    <input class = 'logout-btn' type="submit" value="Log Out" class="btn-small red" />
-  </form>
-  </div>
-
-
-<div class = 'searchbar-div'>
-
-<input class = 'searchbar' type = 'text' placeholder = 'search...' id = 'search-box' oninput = 'Search((this.value).toLowerCase())'/>
-
-<img class = 'search-pic' src = 'https://www.freeiconspng.com/thumbs/magnifying-glass-icon/magnifying-glass-icon-13.png'></img>
-  </div>
-
-
-  <script>
-      function Search(item){
-              let collection = document.getElementsByClassName("songItem");
-              for (i = 0;i < collection.length; i++){
-                  if (((collection[i].innerHTML).toLowerCase()).indexOf(item) > -1) {
-                      collection[i].style.display = "block";
-                      } else {
-                          collection[i].style.display = "none";
-                          }
-              }
-      }
-  </script>
-
-
-</div>
-</header>
-
-<nav class = 'header-btns'>
-
-  <form class = 'addsong-btn' action='/songs/new' >
-  <input class = 'btn' type='submit' value = '+    Add a song' />
-</form>
-
-<div class = 'shufflebtn-div'>
-<form class = 'shuffle-btn' action='/songs/shuffle' >
-<img class = 'shuffle-icon' src="https://i.imgur.com/gAn6FO2.png">
-<input class = 'shuffle-button' type='submit' value = 'Shuffle' />
-</form>
-</div>
-
-<div class = 'playlistbtn-div'>
-<form class = 'playlist-btn' action='/songs/playlist' >
-<img class = 'playlist-icon' src="https://i.imgur.com/PlGSAO2.png">
-<input class = 'playlist-button' type='submit' value = 'Generate Playlist' />
-</form>
-</div>
-</nav>
+  <header>
+    <div class = 'logo-cs'>
+      <div class = 'logoanchor-div'>
+        <a class = 'logoanchor' href = '/songs'><img class = 'logo' src = 'https://i.imgur.com/iX8bkQR.png'></img></a>
+      </div>
+      <h1 class = 'chordstrike'>ChordStrike</h1>
+    </div>
+    <div class = 'logout-search'>
+      <div class = 'header-right'>
+        <form class = 'logout-btnform' action="/" >
+          <input class = 'logout-btn' type="submit" value="Log Out" class="btn-small red" />
+        </form>
+      </div>
+      <div class = 'searchbar-div'>
+        <input class = 'searchbar' type = 'text' placeholder = 'search...' id = 'search-box' oninput = 'Search((this.value).toLowerCase())'/>
+        <img class = 'search-pic' src = 'https://www.freeiconspng.com/thumbs/magnifying-glass-icon/magnifying-glass-icon-13.png'></img>
+      </div>
+      <script>
+        function Search(item){
+          let collection = document.getElementsByClassName("songItem");
+          for (i = 0;i < collection.length; i++){
+            if (((collection[i].innerHTML).toLowerCase()).indexOf(item) > -1) {
+              collection[i].style.display = "block";
+            } else {
+              collection[i].style.display = "none";
+            }
+          }
+        }
+      </script>
+    </div>
+  </header>
+  <nav class = 'header-btns'>
+    <form class = 'addsong-btn' action='/songs/new' >
+      <input class = 'btn' type='submit' value = '+    Add a song' />
+    </form>
+    <div class = 'shufflebtn-div'>
+      <form class = 'shuffle-btn' action='/songs/shuffle' >
+        <img class = 'shuffle-icon' src="https://i.imgur.com/gAn6FO2.png">
+        <input class = 'shuffle-button' type='submit' value = 'Shuffle' />
+      </form>
+    </div>
+    <div class = 'playlistbtn-div'>
+      <form class = 'playlist-btn' action='/songs/playlist' >
+        <img class = 'playlist-icon' src="https://i.imgur.com/PlGSAO2.png">
+        <input class = 'playlist-button' type='submit' value = 'Generate Playlist' />
+      </form>
+    </div>
+  </nav>
 </div>

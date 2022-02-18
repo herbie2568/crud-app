@@ -1,122 +1,94 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <%- include('./partials/head.ejs') %>
-    <title>Welcome to ChordStrike</title>
-  </head>
-  <body class = 'homepage'>
-    <section class = 'pageone'>
+<head>
+  <meta charset="utf-8">
+  <%- include('./partials/head.ejs') %>
+  <title>Welcome to ChordStrike</title>
+</head>
+<body class = 'homepage'>
+  <section class = 'pageone'>
     <div class = 'stickybarhome'>
 
-    <div class = 'logo-cshome'>
-      <div class = 'logoanchor-divhome'>
-    <img class = 'logohome' src = 'https://i.imgur.com/iX8bkQR.png'></img>
+      <div class = 'logo-cshome'>
+        <div class = 'logoanchor-divhome'>
+          <img class = 'logohome' src = 'https://i.imgur.com/iX8bkQR.png'></img>
+        </div>
+        <h1 class = 'chordstrikehome'>ChordStrike</h1>
       </div>
-    <h1 class = 'chordstrikehome'>ChordStrike</h1>
-
-
+      <div class = 'signup'>
+        <form class = 'signup-btn' action='/signup' >
+          <input class = 'btn' type='submit' value = 'Create Account' />
+        </form>
+        <form class = 'login-btn' action='/login' >
+          <input class = 'btn' type='submit' value = 'Login' />
+        </form>
+      </div>
     </div>
-
-    <div class = 'signup'>
-
-
-    <form class = 'signup-btn' action='/signup' >
-    <input class = 'btn' type='submit' value = 'Create Account' />
-    </form>
-    <form class = 'login-btn' action='/login' >
-    <input class = 'btn' type='submit' value = 'Login' />
-    </form>
-
-    </div>
-    </div>
-
-
     <div class = 'slogan-home'>
       An innovative music library.
-      </div>
-
+    </div>
     <div class="slogan-small1">
-     Stream your favorite tracks in one place. </div>
-     <div class ='slogan-small2'>Store your music here anytime.
-
-    </div>
-
-    <div class="info-btns">
-
-    <form  class = 'get-btnform' action='#page2' >
-    <input  class = 'get-btn' type='submit' value = 'About' />
-    </form>
-
-    <form  class = 'get-btnform' action='/signup' >
-    <input  class = 'get-btn' type='submit' value = 'Get ChordStrike' />
-    </form>
-    </div>
-
+      Stream your favorite tracks in one place. </div>
+      <div class ='slogan-small2'>Store your music here anytime.
+      </div>
+      <div class="info-btns">
+        <form  class = 'get-btnform' action='#page2' >
+          <input  class = 'get-btn' type='submit' value = 'About' />
+        </form>
+        <form  class = 'get-btnform' action='/signup' >
+          <input  class = 'get-btn' type='submit' value = 'Get ChordStrike' />
+        </form>
+      </div>
     </section>
     <section id = 'page2' class = 'pagetwo'>
       <div class = marker> '
-        </div>
-
+      </div>
       <div class="elite1">
         Why use ChordStrike?
       </div>
-
       <div class= 'elite2-container'>
-      <div class="elite2">
-        <img class = 'upload-img' src = 'https://i.imgur.com/UtxOK9E.png'></img>
-        <div class = 'icontext'>
-        Upload any song.
-        </div>
-        </div>
-
-      <div class="elite2">
-        <img class = 'upload-img' src = 'https://i.imgur.com/5RhNSfV.png'></img>
+        <div class="elite2">
+          <img class = 'upload-img' src = 'https://i.imgur.com/UtxOK9E.png'></img>
           <div class = 'icontext'>
-          Save music to your library.
+            Upload any song.
           </div>
         </div>
-      <div class="elite2">
-        <img class = 'upload-img' src = 'https://i.imgur.com/Bbilz7N.png'></img>
-            <div class = 'icontext'>
+        <div class="elite2">
+          <img class = 'upload-img' src = 'https://i.imgur.com/5RhNSfV.png'></img>
+          <div class = 'icontext'>
+            Save music to your library.
+          </div>
+        </div>
+        <div class="elite2">
+          <img class = 'upload-img' src = 'https://i.imgur.com/Bbilz7N.png'></img>
+          <div class = 'icontext'>
             Watch music videos.
-            </div>
-      </div>
-      <div class="elite2">
-        <img class = 'upload-img' src = 'https://i.imgur.com/NJOcOCh.png'></img>
-            <div class = 'icontext'>
+          </div>
+        </div>
+        <div class="elite2">
+          <img class = 'upload-img' src = 'https://i.imgur.com/NJOcOCh.png'></img>
+          <div class = 'icontext'>
             Shuffle through generated playlists.
-            </div>
-      </div>
+          </div>
+        </div>
       </div>
       <form  class = 'get-btnform' action='/signup' >
-      <input  class = 'btn2' type='submit' value = 'Sign Up' />
+        <input  class = 'btn2' type='submit' value = 'Sign Up' />
       </form>
-      </section>
-      <div class = 'footer'>
-
-        <div class = 'logo-csfooter'>
-
+    </section>
+    <div class = 'footer'>
+      <div class = 'logo-csfooter'>
         <img class = 'logofooter' src = 'https://i.imgur.com/HqB6pBl.png'></img>
-
-
       </div>
-
-
-        <ul class = 'footer-ul'>
-          <li class = 'footer-li'>About</li>
-          <li class = 'footer-li'>Legal Notices</li>
-          <li class = 'footer-li'>Privacy Policy</li>
-          <li class = 'footer-li'>Contact Us</li>
-        </ul>
-
-        <div class = 'copyright'>
-          © 2022 ChordStrike
-        </div>
-
+      <ul class = 'footer-ul'>
+        <li class = 'footer-li'>About</li>
+        <li class = 'footer-li'>Legal Notices</li>
+        <li class = 'footer-li'>Privacy Policy</li>
+        <li class = 'footer-li'>Contact Us</li>
+      </ul>
+      <div class = 'copyright'>
+        © 2022 ChordStrike
       </div>
-
-
-
+    </div>
   </body>
-</html>
+  </html>

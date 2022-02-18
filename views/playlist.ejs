@@ -1,56 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <%- include('./partials/head.ejs') %>
-    <title></title>
-  </head>
-  <body>
-    <%- include('./partials/header.ejs') %>
-
-      <div class = 'playlist'>
-        <h1 class = 'orangeh1'>Generate Playlist</h1>
-
-        <form class = 'make-playlist' action = '/generate-playlist' method = 'POST'>
-
-        <div>
-          <input class = 'number-songs' name = 'numberOfSongs' type='text' placeholder = 'enter number of songs...' id = 'songNumber' />
+<head>
+  <meta charset="utf-8">
+  <%- include('./partials/head.ejs') %>
+  <title>Generate Playlist</title>
+</head>
+<body>
+  <%- include('./partials/header.ejs') %>
+  <div class = 'playlist'>
+    <h1 class = 'orangeh1'>Generate Playlist</h1>
+    <form class = 'make-playlist' action = '/generate-playlist' method = 'POST'>
+      <div>
+        <input class = 'number-songs' name = 'numberOfSongs' type='text' placeholder = 'enter number of songs...' id = 'songNumber' />
       </div>
-
-        <input class = 'playlist-btn2' type = 'submit' value = 'make playlist'>
-      </form>
-
-      <% songsPlaylist = songsPlaylist.sort(() => Math.random()-0.5) %>
-
-      <div class="playlist-container">
-        <% for (let i = 0; i < 10; i++) { %>
-          <li>
-
-            <% if (!songsPlaylist[i].img) {
-              songsPlaylist[i].img = 'https://i.imgur.com/03uVfdA.png'
-            } %>
-
-            <a href = '/songs/<%=songsPlaylist[i].id%>'><img class = 'indexphoto' src = '<%= songsPlaylist[i].img %>'></img><a>
+      <input class = 'playlist-btn2' type = 'submit' value = 'make playlist'>
+    </form>
+    <% songsPlaylist = songsPlaylist.sort(() => Math.random()-0.5) %>
+    <div class="playlist-container">
+      <% for (let i = 0; i < 10; i++) { %>
+        <li>
+          <% if (!songsPlaylist[i].img) {
+            songsPlaylist[i].img = 'https://i.imgur.com/03uVfdA.png'
+          } %>
+          <a href = '/songs/<%=songsPlaylist[i].id%>'><img class = 'indexphoto' src = '<%= songsPlaylist[i].img %>'></img><a>
             <div class = 'song-info'> <%=songsPlaylist[i].title%> <br/> <span class = 'artist'><%=songsPlaylist[i].artist%><span>
             </div>
-
-
-          <div class = 'ed-btns'>
-            <form class = 'edit-btn-form' action='/songs/<%=songsPlaylist[i].id; %>/edit' >
-            <input class = 'edit-btn' type='submit' value = 'Edit' />
-          </form>
-            <form class = 'delete-btn-form' action="/songs/<%=songsPlaylist[i].id%>?_method=DELETE" method="POST">
-            <input class = 'delete-btn' type='submit' value = 'Delete' />
-          </form>
-          </div>
-
+            <div class = 'ed-btns'>
+              <form class = 'edit-btn-form' action='/songs/<%=songsPlaylist[i].id; %>/edit' >
+                <input class = 'edit-btn' type='submit' value = 'Edit' />
+              </form>
+              <form class = 'delete-btn-form' action="/songs/<%=songsPlaylist[i].id%>?_method=DELETE" method="POST">
+                <input class = 'delete-btn' type='submit' value = 'Delete' />
+              </form>
+            </div>
           </li>
-
-      <% } %>
-
-
-      </div>
+          <% } %>
+        </div>
       </div>
     </div>
   </body>
-</html>
+  </html>

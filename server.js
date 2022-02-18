@@ -10,26 +10,14 @@ const Songdata = require('./models/songs.js')
 const songsSeed = require('./models/seed.js')
 const User = require('./models/users.js')
 const Songnumber = require('./models/numberofsongs.js')
-const MongoDBStore = require('connect-mongodb-session')(session)
-const store = new MongoDBStore ({
-  uri: 'mongodb://localhost:27017/connect_mongodb_session_test',
-  collection: 'mySessions'
-});
 const userController = require('./controllers/users_controller.js')
 const sessionsController = require('./controllers/sessions_controller.js')
 app.use('/sessions', sessionsController)
-
-
 const db = mongoose.connection;
 require('dotenv').config()
 const PORT = process.env.PORT || 3000;
 const MONGODB_URI = process.env.MONGODB_URI;
 mongoose.connect(MONGODB_URI)
-
-
-store.on('error', function(error) {
-  console.log(error);
-})
 
 
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
@@ -50,17 +38,6 @@ app.use(
     saveUninitialized: false
   })
 )
-
-app.use(require('express-session')({
-  secret: 'This is a secret',
-  cookie: {
-    maxAge: 1000 * 60 * 60 * 24 * 7
-  },
-  store: store,
-  resave: true,
-  saveUninitialized: true
-
-}))
 
 ///HOMEPAGE ROUTE///
 app.get('/', (req, res) => {
@@ -83,8 +60,6 @@ app.get('/new', (req, res) => {
 })
 })
 
-
-
 ////LOGIN ROUTE////
 app.get('/login', (req, res) => {
   res.render('sessions-new.ejs')
@@ -101,16 +76,7 @@ app.post('/login', (req, res) => {
   res.send(`Username: ${username} Password: ${password}`)
 })
 
-////PLAYLIST ROUTE///
-// app.get('/songs/playlist', (req, res) => {
-//   Songdata.find({}, (error, allSongsPlaylist) => {
-//     res.render('playlist.ejs', {
-//       songsPlaylist: allSongsPlaylist,
-//       currentUser: true
-//     })
-//   })
-// })
-
+////PLAYLIST ROUTE////
 app.get('/songs/playlist', (req, res) => {
   Songdata.find({}, (error, allSongsPlaylist) => {
     Songnumber.find({}, (error, makeSongsPlaylist) => {
@@ -137,15 +103,6 @@ app.post('/generate-playlist', (req, res) => {
 
 
 ////GENERATE PLAYLIST ROUTE////
-// app.get('/generate-playlist', (req, res) => {
-//   Songdata.find({}, (error, makePlaylist) => {
-//     res.render('playlistpage.ejs', {
-//       songsPlaylistPage: makePlaylist,
-//       currentUser: true
-//     })
-//   })
-// })
-
 app.get('/generate-playlist', (req, res) => {
   Songdata.find({}, (error, makePlaylist) => {
     Songnumber.find({}, (error, makeSongs) => {
@@ -168,8 +125,6 @@ app.get('/songs/shuffle', (req, res) => {
   })
 })
 
-
-
 ////NEW ROUTE////
 app.get('/songs/new', (req, res) => {
   res.render('new.ejs', {
@@ -177,7 +132,6 @@ app.get('/songs/new', (req, res) => {
   })
 
 })
-
 
 /////CREATE ROUTE////
 app.post('/songs/', (req, res) => {
@@ -187,15 +141,6 @@ app.post('/songs/', (req, res) => {
 })
 
 ////SHOW ROUTE/////
-// app.get('/songs/:id', (req, res) => {
-//   Songdata.findById(req.params.id, (err, foundSong) => {
-//     res.render('show.ejs', {
-//       currentUser: true,
-//       songsShow: foundSong
-//     })
-//   })
-// })
-
 app.get('/songs/:id', (req, res) => {
   Songdata.find({}, (err, showSong) => {
     Songdata.findById(req.params.id, (err, foundSong) => {
@@ -235,8 +180,6 @@ app.delete('/songs/:id', (req, res)=>{
         res.redirect('/songs');//
     });
 });
-
-
 
 ////INDEX FILE ROUTE////
 app.get('/songs', (req, res) => {

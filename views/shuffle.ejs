@@ -1,49 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <%- include('./partials/head.ejs') %>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="/button.js"></script>
-    <title></title>
-  </head>
-  <body>
-    <%- include('./partials/header.ejs') %>
-
-    <div class = 'index-container'>
+<head>
+  <meta charset="utf-8">
+  <%- include('./partials/head.ejs') %>
+  <title>Shuffle</title>
+</head>
+<body>
+  <%- include('./partials/header.ejs') %>
+  <div class = 'index-container'>
     <h1 class = 'my-library'>My Library</h1>
     <div class = 'song-number'><%=songsShuffle.length%> songs</div>
-      <div class="container">
-
-          <% songsShuffle = songsShuffle.sort(() => Math.random()-0.5) %>
-        <% for (let i = 0; i < songsShuffle.length; i++) { %>
-          <li class = 'songItem'>
-
-            <% if (!songsShuffle[i].img) {
-              songsShuffle[i].img = 'https://i.imgur.com/03uVfdA.png'
-            } %>
-
-            <a href = '/songs/<%=songsShuffle[i].id%>'><img class = 'indexphoto' src = '<%= songsShuffle[i].img %>'></img><a>
+    <div class="container">
+      <% songsShuffle = songsShuffle.sort(() => Math.random()-0.5) %>
+      <% for (let i = 0; i < songsShuffle.length; i++) { %>
+        <li class = 'songItem'>
+          <% if (!songsShuffle[i].img) {
+            songsShuffle[i].img = 'https://i.imgur.com/03uVfdA.png'
+          } %>
+          <a href = '/songs/<%=songsShuffle[i].id%>'><img class = 'indexphoto' src = '<%= songsShuffle[i].img %>'></img><a>
             <div class = 'song-info'> <%=songsShuffle[i].title%> <br/> <span class = 'artist'><%=songsShuffle[i].artist%><span>
             </div>
-
-<a id = 'button' title = 'button'>♥ Like</a>
-          <div class = 'ed-btns'>
-            <form class = 'edit-btn-form' action='/songs/<%=songsShuffle[i].id; %>/edit' >
-            <input class = 'edit-btn' type='submit' value = 'Edit' />
-          </form>
-            <form class = 'delete-btn-form' action="/songs/<%=songsShuffle[i].id%>?_method=DELETE" method="POST">
-            <input class = 'delete-btn' type='submit' value = 'Delete' />
-          </form>
-          </div>
-
+            <a id = 'button' title = 'button'>♥ Like</a>
+            <div class = 'ed-btns'>
+              <form class = 'edit-btn-form' action='/songs/<%=songsShuffle[i].id; %>/edit' >
+                <input class = 'edit-btn' type='submit' value = 'Edit' />
+              </form>
+              <form class = 'delete-btn-form' action="/songs/<%=songsShuffle[i].id%>?_method=DELETE" method="POST">
+                <input class = 'delete-btn' type='submit' value = 'Delete' />
+              </form>
+            </div>
           </li>
-
-      <% } %>
-
-
+          <% } %>
+        </div>
       </div>
-    </div>
-
-  </body>
-</html>
+    </body>
+    </html>

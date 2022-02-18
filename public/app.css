@@ -169,7 +169,7 @@ header {
 }
 
 .shuffle-btn:hover, .playlist-btn:hover {
-  transform: scale(1.05)
+  transform: scale(1.05);
   cursor: pointer;
 }
 .shufflebtn-div {
@@ -182,8 +182,8 @@ header {
   top: 13px;
   left: 26px;
   z-index: 999;
-
 }
+
 
 .shuffle-button {
   font-size: 16px;
@@ -714,7 +714,7 @@ html {
 }
 
 footer {
-  background-color: #ff914d;
+  background-color: #f46530;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -725,7 +725,7 @@ footer {
 }
 
 .footer {
-  background-color: #ff914d;
+  background-color: #f46530;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

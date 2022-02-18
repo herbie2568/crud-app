@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
   <%- include('./partials/head.ejs') %>
-    <title>Edit Song Details</title>
-
-  </head>
-  <body>
-    <%- include('./partials/header.ejs') %>
-    <div class = 'edit-song'>
+  <title>Edit Song Details</title>
+</head>
+<body>
+  <%- include('./partials/header.ejs') %>
+  <div class = 'edit-song'>
     <h1 class = 'orangeh1'>Edit Song Details</h1>
     <form class = 'newsong-form' action = "/songs/<%= songsEdit.id%>?_method=PUT" method = 'POST'>
       <input class = 'newsong' type='text' name = 'title' placeholder = 'song title...' value = '<%=songsEdit.title%>'/><br/>
       <input class = 'newsong' type='text' name = 'artist' placeholder = 'artist...' value = '<%=songsEdit.artist%>'/><br/>
       <input class = 'newsong' type= 'url' name = 'img' value = '<%=songsEdit.img%>' placeholder = 'album image URL...'/><br/>
       <input class = 'newsong' type= 'url' name = 'musicvideo' value = '<%=songsEdit.musicvideo%>' placeholder = 'youtube embed URL...'/><br/>
-
       <%- include('./partials/genre.ejs') %>
-
       <form action= '/songs' >
         <div class = 'cancel-btns'>
-        <input class = 'btn' type = 'submit' value = 'Cancel'/>
-      </form>
-
-      <input class = 'btn' type = 'submit' value = 'Submit Changes'/>
-    </div>
+          <input class = 'btn' type = 'submit' value = 'Cancel'/>
+        </form>
+        <input class = 'btn' type = 'submit' value = 'Submit Changes'/>
+      </div>
     </form>
   </body>
-</html>
+  </html>
