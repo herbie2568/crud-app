@@ -48,6 +48,13 @@ header {
   margin-right: 1vw;
 }
 
+.logoanchor-divshow {
+  width: min(13.2%, 100px);
+  align-self: center;
+  margin-left: 2vw;
+  margin-right: 1vw;
+}
+
 .logo {
   width: min(100%, 110px);
   transition-duration: 0.3s;
