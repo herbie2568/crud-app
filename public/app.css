@@ -11,7 +11,6 @@ h1 {
 a {
   text-decoration: none;
   color: white;
-  /* font-size: 2vw; */
 }
 
 .logo-cs {
@@ -418,7 +417,6 @@ header {
 }
 
 .checkbox {
-  /* color: white; */
   width: 20px;
   height: 20px;
 }
@@ -456,12 +454,6 @@ header {
   border: 2px solid grey;
 }
 
-/* .show-player {
-  width: 80%;
-  background: #333333;
-
-} */
-
 .homepage {
   background: #ff914d;
 }
@@ -485,7 +477,6 @@ header {
   right: 0;
 
 }
-
 
 .logohome {
   width: 100%;
@@ -756,7 +747,6 @@ footer {
 
 .footer-li:hover {
   cursor: pointer;
-  /* transform: scale(1.05); */
   color: white;
 }
 .logo-csfooter {

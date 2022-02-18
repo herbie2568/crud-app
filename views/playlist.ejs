@@ -18,7 +18,7 @@
     <% songsPlaylist = songsPlaylist.sort(() => Math.random()-0.5) %>
     <div class="playlist-container">
       <% for (let i = 0; i < 10; i++) { %>
-        <li>
+        <li class = 'songItem'>
           <% if (!songsPlaylist[i].img) {
             songsPlaylist[i].img = 'https://i.imgur.com/03uVfdA.png'
           } %>
